@@ -1,3 +1,0 @@
-backend:
-  name: netlify-cms-test
-  branch: master # Branch to update (optional; defaults to master)
