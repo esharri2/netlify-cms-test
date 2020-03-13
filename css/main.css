@@ -1,0 +1,62 @@
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#title {
+  height: 89vh;
+}
+
+.custom-input {
+  @apply block w-full bg-transparent border-solid border border-jet my-1 p-2;
+}
+
+.custom-input:focus {
+  outline-color: #F76F8E;
+}
+
+.custom-tilt {
+  transition: transform 1s;
+}
+
+.custom-tilt:hover {
+  transform: perspective( 600px ) rotateY( 12deg );
+}
+
+#about {
+  padding-top: 60vh;
+  padding-bottom: 70vh;
+  clip-path: polygon(0 10%, 100% 0, 100% 120%, 0 100%);
+}
+
+#portfolio {
+  margin-top: -40vh;
+  padding-top: 50vh;
+  padding-bottom: 70vh;
+  clip-path: polygon(0 0%, 100% 5%, 100% 120%, 0 100%);
+}
+
+#contact {
+  margin-top: -40vh;
+  padding-top: 40vh;
+  padding-bottom: 10vh;
+  clip-path: polygon(0 15%, 100% 0, 100% 120%, 0 100%);
+}
+
+
+
+/* CSS components */
+.btn-link {
+  @apply flex w-full my-1 p-2 justify-between border border-jet border-solid ;
+}
+
+.btn-link:focus, .btn-link:hover {
+  @apply font-bold;
+}

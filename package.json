@@ -1,15 +1,44 @@
 {
-  "name": "netlify-cms-test",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {},
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "NODE_ENV=production npm-run-all webpack-prod eleventy",
+    "dev": "npm-run-all --parallel webpack-dev eleventy-dev",
+    "start": "npm-run-all --parallel webpack-dev eleventy-dev",
+    "eleventy": "ELEVENTY_ENV=production eleventy --config=eleventy.config.js",
+    "eleventy-dev": "ELEVENTY_ENV=development eleventy --config=eleventy.config.js --watch --serve",
+    "webpack-prod": "webpack --mode=production --config webpack.prod.js",
+    "webpack-dev": "webpack --mode=development --config webpack.dev.js --watch"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esharri2/portfolio.git"
+  },
+  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esharri2/portfolio/issues"
+  },
+  "homepage": "https://github.com/esharri2/portfolio#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0",
+    "@fullhuman/postcss-purgecss": "^1.3.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.0",
+    "cssnano": "^4.1.10",
+    "mini-css-extract-plugin": "^0.9.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.25",
+    "postcss-loader": "^3.0.0",
+    "purgecss": "^2.0.6",
+    "style-loader": "^1.1.2",
+    "tailwindcss": "^1.2.0",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {}
 }
