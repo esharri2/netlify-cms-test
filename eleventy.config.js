@@ -16,7 +16,10 @@ module.exports = config => {
   config.setUseGitIgnore(false);
 
   // Short codes
-  config.addNunjucksShortcode("markdown", content => markdown.render(content));
+  config.addNunjucksShortcode(
+    "markdown",
+    content => `<div class="md-block">${markdown.render(content)}</div>`
+  );
 
   // You can return your Config object (optional).
   return {

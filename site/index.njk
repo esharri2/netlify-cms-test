@@ -4,6 +4,9 @@ layout: default
 
 <h1>Hello World</h1>
 
+{% set snippet %}{% include './content/bio.md' %}{% endset %}
+{% markdown snippet %}
+
 
 <p>sup</p>
 <p>{{settings.site_title}}</p>
