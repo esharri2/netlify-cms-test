@@ -11,7 +11,6 @@ show_preview_links: false
 collections: # A list of collections the CMS should be able to edit
   - name: 'settings'
     label: 'General'
-    delete: false # Prevent users from deleting documents in this collection    
     files:
       - name: 'general'
         label: 'General site information'
@@ -19,4 +18,11 @@ collections: # A list of collections the CMS should be able to edit
         description: 'Basic information about your site, such as title and description.'
         fields:
           - { label: 'Title', name: 'site_title', widget: 'string' }
-          - { label: 'Subtitle', name: 'site_subtitle', widget: 'string' }
+          - { label: 'Subtitle', name: 'site_subtitle', widget: 'string', required: false }
+      - name: 'bio'
+        label: 'Bio'
+        file: 'content/bio.md'
+        description: 'Biographical information.'
+        fields:
+          - { label: 'Author image', name: 'author_image', widget: "image", required: false}
+          - { label: 'Bio', name: 'bio', widget: 'markdown' }
