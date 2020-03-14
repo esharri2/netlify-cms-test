@@ -17,5 +17,10 @@ collections:
         name: "title"
         file: "content/title"
         fields:
-          - { label: Site Title, name: title, widget: string }
-          - { label: Site subtitle, name: subtitle, widget: string, required: false}
+          - { label: "Site Title", name: "title", widget: "string" }
+          - {
+              label: "Site subtitle",
+              name: "subtitle",
+              widget: "string",
+              required: false,
+            }
