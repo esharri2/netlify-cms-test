@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
-media_folder: "content/media/uploads" # Media files will be stored in the repo under images/uploads
+media_folder: "content/uploads" # Media files will be stored in the repo under images/uploads
 
 # CMS UI CONFIG
 show_preview_links: false
@@ -25,4 +25,4 @@ collections: # A list of collections the CMS should be able to edit
         description: 'Biographical information.'
         fields:
           - { label: 'Author image', name: 'author_image', widget: "image", required: false}
-          - { label: 'Bio', name: 'bio', widget: 'markdown' }
+          - { label: 'Bio', name: 'body', widget: 'markdown' }

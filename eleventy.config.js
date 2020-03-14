@@ -21,7 +21,7 @@ module.exports = config => {
       input: "site",
       output: "dist",
       includes: "includes",
-      data: "globals"
+      data: "content"
     }
   };
 };
