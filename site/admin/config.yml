@@ -9,12 +9,12 @@ show_preview_links: false
 
 # COLLECTIONS
 collections:
-  - label: "General"
+  - label: "General site info"
     name: "general"
-    description: "General site info, such as title."
+    description: "General site information, such as title and description."
     files:
-      - label: "Title and subtitle"
-        name: "title"
+      - name: "title"
+        label: "Title"
         file: "content/title"
         fields:
           - { label: "Site Title", name: "title", widget: "string" }
