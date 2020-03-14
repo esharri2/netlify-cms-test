@@ -4,6 +4,5 @@ layout: default
 
 <div>
 <p>hi friends</p>
+{{%include content/bio.md%}}
 </div>
-
-

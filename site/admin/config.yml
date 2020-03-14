@@ -14,14 +14,14 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - name: 'general'
         label: 'General site information'
-        file: 'content/settings.json'
+        file: 'site/content/settings.json'
         description: 'Basic information about your site, such as title and description.'
         fields:
           - { label: 'Title', name: 'site_title', widget: 'string' }
           - { label: 'Subtitle', name: 'site_subtitle', widget: 'string', required: false }
       - name: 'bio'
         label: 'Bio'
-        file: 'site/content/bio.json'
+        file: 'site/content/bio.md'
         description: 'Biographical information.'
         fields:
           - { label: 'Author image', name: 'author_image', widget: "image", required: false}
