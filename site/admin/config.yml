@@ -11,11 +11,11 @@ show_preview_links: false
 collections:
   - label: "General"
     name: "general"
-    descripton: "General site info, such as title."
+    description: "General site info, such as title."
     files:
       - label: "Title and subtitle"
         name: "title"
         file: "content/title"
         fields:
           - { label: "Site Title", name: "title", widget: "string" }
-          - { label: "Site subtitle", name: "subtitle", widget: "string", required: false}
+          - { label: "Site subtitle", name: "subtitle", widget: "string", required: false }
