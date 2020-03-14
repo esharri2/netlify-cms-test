@@ -4,6 +4,10 @@ backend:
 
 media_folder: "media/uploads" # Media files will be stored in the repo under images/uploads
 
+# CMS UI CONFIG
+show_preview_links: false
+
+# COLLECTIONS
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
