@@ -21,7 +21,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: 'Subtitle', name: 'site_subtitle', widget: 'string', required: false }
       - name: 'bio'
         label: 'Bio'
-        file: 'content/bio.json'
+        file: 'site/content/bio.json'
         description: 'Biographical information.'
         fields:
           - { label: 'Author image', name: 'author_image', widget: "image", required: false}
