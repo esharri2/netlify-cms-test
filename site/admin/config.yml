@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
-media_folder: "content/uploads" # Media files will be stored in the repo under images/uploads
+media_folder: "site/content/uploads" # Media files will be stored in the repo under images/uploads
 
 # CMS UI CONFIG
 show_preview_links: false
