@@ -1,3 +1,7 @@
+let markdown = require("markdown-it")({
+  html: true
+});
+
 module.exports = config => {
   // Add a filter using the Config API
   //   eleventyConfig.addFilter("myFilter", function() {});
@@ -10,6 +14,9 @@ module.exports = config => {
   config.addPassthroughCopy("site/media");
   config.addPassthroughCopy({ "site/assets": "/" });
   config.setUseGitIgnore(false);
+
+  // Short codes
+  config.addNunjucksShortcode("markdown", content => markdown.render(content));
 
   // You can return your Config object (optional).
   return {
