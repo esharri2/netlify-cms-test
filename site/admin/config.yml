@@ -81,12 +81,10 @@ collections: # A list of collections the CMS should be able to edit
                 name: "contact"
                 widget: "object"
                 fields:
-                  - label: "Email"
-                    name: "email"
-                    widget: "string"
-                  - label: "Purpose"
-                    name: "purpose"
-                    widget: "string"
+                  [
+                    { label: "Email", name: "email", widget: "string"},
+                    { label: "Purpose", name: "purpose", widget: "string" }
+                  ],
       - name: "social"
         label: "Social media links"
         description: "description test!!!!"
