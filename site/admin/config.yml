@@ -76,6 +76,9 @@ collections: # A list of collections the CMS should be able to edit
               label: "Main contact email",
               name: "main_email",
               widget: "string",
+              hint:
+                "The contact form will send email to this address. This address
+                won't appear in any way on the website.",
             }
           - label: "Other contact emails"
             description:
@@ -87,22 +90,41 @@ collections: # A list of collections the CMS should be able to edit
               - { label: "Purpose", name: "purpose", widget: "string" }
       - name: "social"
         label: "Social media links"
-        description: "description test!!!!"
         file: "site/content/social-media.json"
         fields:
           - {
               label: "Facebook",
               name: "facebook_url",
               widget: "string",
-              hint: "https://www.facebook.com/yourpage",
+              hint: "e.g. https://www.facebook.com/yourpage",
               pattern:
                 [
                   '@^(https?)://[^\s/$.?#].[^\s]*$@iS',
                   "You must use a valid url that starts with https: or http:",
                 ],
             }
-          - { label: "Twitter", name: "twitter_url", widget: "string" }
-          - { label: "Instagram", name: "instagram_url", widget: "string" }
+          - {
+              label: "Twitter",
+              name: "twitter_url",
+              widget: "string",
+              hint: "e.g. https://www.twitter.com/youraccount",
+              pattern:
+                [
+                  '@^(https?)://[^\s/$.?#].[^\s]*$@iS',
+                  "You must use a valid url that starts with https: or http:",
+                ],
+            }
+          - {
+              label: "Instagram",
+              name: "instagram_url",
+              widget: "string",
+              hint: "e.g. https://www.instagram.com/youraccount",
+              pattern:
+                [
+                  '@^(https?)://[^\s/$.?#].[^\s]*$@iS',
+                  "You must use a valid url that starts with https: or http:",
+                ],
+            }
   - name: "posts"
     label: "News items"
     label_singular: "news item"
@@ -170,7 +192,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: "Text", name: "text", widget: "text" }
           - { label: "Attribution", name: "attribution", widget: "string" }
   - name: "publications"
-    label: "Publications"
+    label: "Other publications"
     label_singular: "publication"
     description: "Non-book publications"
     folder: "site/content/publications"
