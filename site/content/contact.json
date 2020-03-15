@@ -1,0 +1,17 @@
+{
+  "other_emails": [
+    {
+      "contact": {
+        "purpose": "For bookings",
+        "email": "booking@email.com"
+      }
+    },
+    {
+      "contact": {
+        "purpose": "For reviews:",
+        "email": "review@email.com"
+      }
+    }
+  ],
+  "main_email": "main-email@email.com"
+}
