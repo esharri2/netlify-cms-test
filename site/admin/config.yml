@@ -36,15 +36,17 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - label: "Author image"
             name: "author_image"
-            widget: "image"
+            widget: "object"
             required: false
             fields:
-              - {
-                  label: "Author image byline",
-                  name: "author_image_byline",
-                  widget: "string",
-                  required: false,
-                }
+              - label: "Author image"
+                name: "file"
+                widget: "image"
+                required: false
+              - label: "Author image byline"
+                name: "byline"
+                widget: "string"
+                required: false
           - label: "Bio"
             name: "body"
             widget: "markdown"
@@ -75,4 +77,4 @@ collections: # A list of collections the CMS should be able to edit
         label: "Social media links"
         file: "site/content/social-media.json"
         fields:
-          - { label: "Title", name: "site_title", widget: "string" }
+          - { label: "Facebook", name: "facebook_url", widget: "string" }
