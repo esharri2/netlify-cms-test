@@ -11,12 +11,12 @@ show_preview_links: false
 collections: # A list of collections the CMS should be able to edit
   - name: "general"
     label: "General"
+    description:
+      "Basic information about your site, such as title and description."
     files:
       - name: "general"
         label: "General site information"
         file: "site/content/general.json"
-        description:
-          "Basic information about your site, such as title and description."
         fields:
           - { label: "Title", name: "site_title", widget: "string" }
           - {
@@ -28,17 +28,24 @@ collections: # A list of collections the CMS should be able to edit
   - name: "bio"
     label: "Bio"
     delete: true,
+    description: "Biographical information."
     files:
       - name: "bio"
         label: "Bio"
         file: "site/content/bio.md"
-        description: "Biographical information."
         fields:
           - {
               label: "Author image",
               name: "author_image",
               widget: "image",
               required: false,
+              fields: 
+              - {
+                  label: "Author image byline",
+                  name: "author_image_byline",
+                  widget: "string",
+                  required: false,
+              }
             }
           - {
               label: "Bio",
@@ -55,3 +62,21 @@ collections: # A list of collections the CMS should be able to edit
                 ],
               required: false,
             }
+  - name: "contact"
+    label: "Contact information"
+    description: "Contact information and social media links."
+    files:
+      - name: "contact"
+        label: "Contact information"
+        file: "site/content/contact.json"
+        fields:
+          - {
+              label: "Main contact email",
+              name: "main_email",
+              widget: "string",
+            }
+      - name: "social"
+        label: "Social media links"
+        file: "site/content/social-media.json"
+        fields:
+          - { label: "Title", name: "site_title", widget: "string" }
