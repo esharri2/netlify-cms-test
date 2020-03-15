@@ -45,7 +45,7 @@ collections: # A list of collections the CMS should be able to edit
                   name: "author_image_byline",
                   widget: "string",
                   required: false,
-              }
+              },
             }
           - {
               label: "Bio",
