@@ -68,13 +68,29 @@ collections: # A list of collections the CMS should be able to edit
         label: "Contact information"
         file: "site/content/contact.json"
         fields:
-          - {
-              label: "Main contact email",
-              name: "main_email",
-              widget: "string",
-            }
+          - label: "Main contact email"
+            name: "main_email"
+            widget: "string"
+          - label: "Other contact emails"
+            description:
+              "Emails for special cases, such as bookings or reviews."
+            name: "other_emails"
+            widget: "list"
+            field:
+              - label: Alternative contact,
+                name: contact,
+                widget: object,
+                fields:
+                  - label: "Email"
+                    name: "email"
+                    widget: "string"
+                  - label: "Purpose"
+                    name: "purpose"
+                    widget: "string"
       - name: "social"
         label: "Social media links"
         file: "site/content/social-media.json"
         fields:
           - { label: "Facebook", name: "facebook_url", widget: "string" }
+          - { label: "Twitter", name: "twitter_url", widget: "string" }
+          - { label: "Instagram", name: "instagram_url", widget: "string" }
