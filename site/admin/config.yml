@@ -39,14 +39,18 @@ collections: # A list of collections the CMS should be able to edit
             widget: "object"
             required: false
             fields:
-              - label: "Author image"
-                name: "file"
-                widget: "image"
-                required: false
-              - label: "Author image byline"
-                name: "byline"
-                widget: "string"
-                required: false
+              - {
+                  label: "Author image",
+                  name: "file",
+                  widget: "image",
+                  required: false,
+                }
+              - {
+                  label: "Author image byline",
+                  name: "byline",
+                  widget: "string",
+                  required: false,
+                }
           - label: "Bio"
             name: "body"
             widget: "markdown"
@@ -68,25 +72,19 @@ collections: # A list of collections the CMS should be able to edit
         label: "Contact information"
         file: "site/content/contact.json"
         fields:
-          - label: "Main contact email"
-            name: "main_email"
-            widget: "string"
+          - {
+              label: "Main contact email",
+              name: "main_email",
+              widget: "string",
+            }
           - label: "Other contact emails"
             description:
               "Emails for special cases, such as bookings or reviews."
             name: "other_emails"
             widget: "list"
             fields:
-              - label: "Alternative contact"
-                name: "contact"
-                widget: "object"
-                fields:
-                  - label: "Email"
-                    name: "email"
-                    widget: "string"
-                  - label: "Purpose"
-                    name: "purpose"
-                    widget: "string"
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Purpose", name: "purpose", widget: "string" }
       - name: "social"
         label: "Social media links"
         description: "description test!!!!"
@@ -102,7 +100,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: "Instagram", name: "instagram_url", widget: "string" }
   - name: "posts"
     label: "News items"
-    label_singular: "News item"
+    label_singular: "news item"
     folder: "site/content/posts"
     create: true
     description: "Updates and announcements."
@@ -127,3 +125,34 @@ collections: # A list of collections the CMS should be able to edit
         widget: "markdown"
         buttons:
           ["bold", "italic", "link", "quote", "bulleted-list", "numbered-list"]
+  - name: "books"
+    label: "Books"
+    label_singular: "book"
+    folder: "site/content/books"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Publisher",
+          name: "publisher",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Cover image",
+          name: "cover",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Purchase link", name: "purchase_link", widget: "string" }
+      - label: "Blurbs"
+        name: "blurbs"
+        widget: "list"
+        required: false
+        fields:
+          - label: "Blurb"
+            name: "blurb"
+            widget: "object"
+            fields:
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Attribution", name: "attribution", widget: "string" }
