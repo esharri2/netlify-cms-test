@@ -9,20 +9,49 @@ show_preview_links: false
 
 # COLLECTIONS
 collections: # A list of collections the CMS should be able to edit
-  - name: 'settings'
-    label: 'General'
+  - name: "general"
+    label: "General"
     files:
-      - name: 'general'
-        label: 'General site information'
-        file: 'site/content/settings.json'
-        description: 'Basic information about your site, such as title and description.'
+      - name: "general"
+        label: "General site information"
+        file: "site/content/general.json"
+        description:
+          "Basic information about your site, such as title and description."
         fields:
-          - { label: 'Title', name: 'site_title', widget: 'string' }
-          - { label: 'Subtitle', name: 'site_subtitle', widget: 'string', required: false }
-      - name: 'bio'
-        label: 'Bio'
-        file: 'site/content/bio.md'
-        description: 'Biographical information.'
+          - { label: "Title", name: "site_title", widget: "string" }
+          - {
+              label: "Subtitle",
+              name: "site_subtitle",
+              widget: "string",
+              required: false,
+            }
+  - name: "bio"
+    label: "Bio"
+    delete: true,
+    files:
+      - name: "bio"
+        label: "Bio"
+        file: "site/content/bio.md"
+        description: "Biographical information."
         fields:
-          - { label: 'Author image', name: 'author_image', widget: "image", required: false}
-          - { label: 'Bio', name: 'body', widget: 'markdown' }
+          - {
+              label: "Author image",
+              name: "author_image",
+              widget: "image",
+              required: false,
+            }
+          - {
+              label: "Bio",
+              name: "body",
+              widget: "markdown",
+              buttons:
+                [
+                  "bold",
+                  "italic",
+                  "link",
+                  "quote",
+                  "bulleted-list",
+                  "numbered-list",
+                ],
+              required: false,
+            }
