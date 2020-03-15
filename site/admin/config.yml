@@ -76,7 +76,7 @@ collections: # A list of collections the CMS should be able to edit
               "Emails for special cases, such as bookings or reviews."
             name: "other_emails"
             widget: "list"
-            field:
+            fields:
               - label: "Alternative contact"
                 name: "contact"
                 widget: "object"
