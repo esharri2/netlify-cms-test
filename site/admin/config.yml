@@ -48,6 +48,7 @@ collections: # A list of collections the CMS should be able to edit
           - label: "Bio"
             name: "body"
             widget: "markdown"
+            required: false
             buttons:
               [
                 "bold",
@@ -57,8 +58,6 @@ collections: # A list of collections the CMS should be able to edit
                 "bulleted-list",
                 "numbered-list",
               ]
-            required: false,
-
   - name: "contact"
     label: "Contact information"
     description: "Contact information and social media links."
