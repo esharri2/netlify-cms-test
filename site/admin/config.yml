@@ -28,6 +28,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: "bio"
     label: "Bio"
     delete: true,
+    format: "frontmatter"
     description: "Biographical information."
     files:
       - name: "bio"
@@ -51,6 +52,10 @@ collections: # A list of collections the CMS should be able to edit
                   widget: "string",
                   required: false,
                 }
+          - label: "Template"
+            name: "template"
+            widget: "hidden"
+            default: "about.njk"
           - label: "Bio"
             name: "body"
             widget: "markdown"
@@ -64,6 +69,7 @@ collections: # A list of collections the CMS should be able to edit
                 "bulleted-list",
                 "numbered-list",
               ]
+
   - name: "contact"
     label: "Contact information"
     description: "Contact information and social media links."
