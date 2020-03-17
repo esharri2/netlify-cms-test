@@ -55,6 +55,7 @@ collections: # A list of collections the CMS should be able to edit
             name: "template"
             widget: "hidden"
             default: "about.njk"
+          - { label: Title, name: title, widget: string }
           - label: "Bio"
             name: "body"
             widget: "markdown"
