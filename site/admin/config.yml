@@ -51,10 +51,13 @@ collections: # A list of collections the CMS should be able to edit
                   widget: "string",
                   required: false,
                 }
-          - label: "Template"
-            name: "template"
-            widget: "hidden"
-            default: "about.njk"
+          - {
+              label: "Layout",
+              name: "layout",
+              widget: "hidden",
+              default: "about.njk",
+            }
+
           - { label: Title, name: title, widget: string }
           - label: "Bio"
             name: "body"
