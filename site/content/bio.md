@@ -1,4 +1,4 @@
 ---
-title: my title
+title: my title some more
 ---
 test bio yo again
