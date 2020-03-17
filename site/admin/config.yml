@@ -27,12 +27,11 @@ collections: # A list of collections the CMS should be able to edit
             }
   - name: "bio"
     label: "Bio"
-    delete: true,
-    format: "frontmatter"
     description: "Biographical information."
     files:
       - name: "bio"
         label: "Bio"
+        format: "frontmatter"
         file: "site/content/bio.md"
         fields:
           - label: "Author image"
