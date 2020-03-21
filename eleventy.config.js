@@ -1,13 +1,18 @@
-let markdown = require("markdown-it")({
+const markdown = require("markdown-it")({
   html: true
 });
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = config => {
   // Add a filter using the Config API
   //   eleventyConfig.addFilter("myFilter", function() {});
 
+  // Plugins
+  config.addPlugin(eleventyNavigationPlugin);
+
   // Layout alias
   config.addLayoutAlias("default", "layouts/default.njk");
+  config.addLayoutAlias("about", "layouts/about.njk");
 
   // Include our static assets
   config.addPassthroughCopy("site/admin");

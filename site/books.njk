@@ -1,0 +1,16 @@
+---
+layout: default
+eleventyNavigation:
+  key: Books
+pagination:
+  data: collections.book
+  size: 100
+  alias: books
+---
+
+<h1 class="custom-heading">Posts</h1>
+{% for post in posts %}
+  <h2>{{ post.data.title }}</h2>
+  {{ post.templateContent | safe}}
+{% endfor %}
+</ol>
