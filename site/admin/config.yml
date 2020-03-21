@@ -100,33 +100,18 @@ collections: # A list of collections the CMS should be able to edit
               name: "facebook_url",
               widget: "string",
               hint: "e.g. https://www.facebook.com/yourpage",
-              pattern:
-                [
-                  '(https?):\/\/[^\s/$.?#].[^\s]*',
-                  "You must use a valid url that starts with https:",
-                ],
             }
           - {
               label: "Twitter",
               name: "twitter_url",
               widget: "string",
               hint: "e.g. https://www.twitter.com/youraccount",
-              pattern:
-                [
-                  '(https?):\/\/[^\s/$.?#].[^\s]*',
-                  "You must use a valid url that starts with https:",
-                ],
             }
           - {
               label: "Instagram",
               name: "instagram_url",
               widget: "string",
               hint: "e.g. https://www.instagram.com/youraccount",
-              pattern:
-                [
-                  '(https?):\/\/[^\s/$.?#].[^\s]*',
-                  "You must use a valid url that starts with https:",
-                ],
             }
   - name: "posts"
     label: "News items"
