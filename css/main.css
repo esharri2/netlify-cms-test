@@ -6,6 +6,10 @@
   @apply font-title text-6xl;
 }
 
+.cmp-markdown p {
+  @apply py-4;
+}
+
 /* CSS components */
 /* .btn-link {
   @apply flex w-full my-1 p-2 justify-between border border-jet border-solid;

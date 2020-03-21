@@ -8,6 +8,11 @@ module.exports = {
     fontFamily: {
       title: ["Ultra", "Times New Roman", "serif"],
       body: ["Source Sans Pro", "Helvetica", "san serif"]
+    },
+    extend: {
+      spacing: {
+        "almost-full": "80vh"
+      }
     }
   }
 };

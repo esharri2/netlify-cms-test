@@ -33,7 +33,7 @@ module.exports = config => {
       input: "site",
       output: "dist",
       includes: "includes",
-      data: "content"
+      data: "data"
     }
   };
 };
