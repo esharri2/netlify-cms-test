@@ -2,10 +2,11 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
-media_folder: "site/content/uploads" # Media files will be stored in the repo under images/uploads
+media_folder: "site/data/uploads" # Media files will be stored in the repo under images/uploads
 
 # CMS UI CONFIG
 show_preview_links: false
+publish_mode: editorial_workflow
 
 # COLLECTIONS
 collections: # A list of collections the CMS should be able to edit
@@ -16,7 +17,7 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - name: "general"
         label: "General site information"
-        file: "site/content/general.json"
+        file: "site/data/general.json"
         fields:
           - { label: "Title", name: "site_title", widget: "string" }
           - {
@@ -72,7 +73,7 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - name: "contact"
         label: "Contact information"
-        file: "site/content/contact.json"
+        file: "site/data/contact.json"
         fields:
           - {
               label: "Main contact email",
@@ -92,7 +93,7 @@ collections: # A list of collections the CMS should be able to edit
               - { label: "Purpose", name: "purpose", widget: "string" }
       - name: "social"
         label: "Social media links"
-        file: "site/content/social-media.json"
+        file: "site/data/social-media.json"
         fields:
           - {
               label: "Facebook",
@@ -102,7 +103,7 @@ collections: # A list of collections the CMS should be able to edit
               pattern:
                 [
                   '@^(https?)://[^\s/$.?#].[^\s]*$@iS',
-                  "You must use a valid url that starts with https: or http:",
+                  "You must use a valid url that starts with https:",
                 ],
             }
           - {
@@ -113,7 +114,7 @@ collections: # A list of collections the CMS should be able to edit
               pattern:
                 [
                   '@^(https?)://[^\s/$.?#].[^\s]*$@iS',
-                  "You must use a valid url that starts with https: or http:",
+                  "You must use a valid url that starts with https:",
                 ],
             }
           - {
@@ -124,13 +125,13 @@ collections: # A list of collections the CMS should be able to edit
               pattern:
                 [
                   '@^(https?)://[^\s/$.?#].[^\s]*$@iS',
-                  "You must use a valid url that starts with https: or http:",
+                  "You must use a valid url that starts with https:",
                 ],
             }
   - name: "posts"
     label: "News items"
     label_singular: "news item"
-    folder: "site/content/posts"
+    folder: "site/posts"
     create: true
     description: "Updates and announcements."
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -156,7 +157,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: "books"
     label: "Books"
     label_singular: "book"
-    folder: "site/content/books"
+    folder: "site/books"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
@@ -196,7 +197,7 @@ collections: # A list of collections the CMS should be able to edit
     label: "Other publications"
     label_singular: "publication"
     description: "Non-book publications"
-    folder: "site/content/publications"
+    folder: "site/publications"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
