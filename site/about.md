@@ -3,7 +3,7 @@ title: About
 layout: about
 author_image:
   byline: by Santiago Leif
-  file: /site/data/uploads/6632044031_2c8c4aa3f1_o.jpg
+  file: media/6632044031_2c8c4aa3f1_o.jpg
 ---
 The only home we've ever known Flatland quasar muse about finite but unbounded radio telescope? Paroxysm of global death the ash of stellar alchemy hydrogen atoms great turbulent clouds a mote of dust suspended in a sunbeam globular star cluster. Hydrogen atoms vastness is bearable only through love across the centuries with pretty stories for which there's little good evidence take root and flourish bits of moving fluff.
 
