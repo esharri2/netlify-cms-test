@@ -10,6 +10,7 @@ synopsis: >-
   Tingling of the spine rich in heavy atoms extraordinary claims require
   extraordinary evidence
 cover: media/book4.jpg
+purchase_link: 'https://www.powells.com'
 blurbs:
   - text: >-
       The ash of stellar alchemy not a sunrise but a galaxy rise vanquish the
