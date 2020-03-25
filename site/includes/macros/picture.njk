@@ -1,9 +1,18 @@
-{% macro picture(filename, caption) %}
-    <figure>
-    <picture>
-        <img src={{filename}}/>
-    </picture>
+{# TODO check if purgecss is catching these class string arguments #}
 
-    <figcaption>{{caption}}</figcaption>
+{% macro figure(filename, alt, caption, figureClasses, captionClasses="italic flex justify-end text-sm") %}
+    <figure class="{{figureClasses}}">
+        <picture>
+            <img alt="{{alt}}" src="{{filename}}">
+        </picture>
+        {% if caption %}
+        <figcaption class="{{captionClasses}}">{{caption}}</figcaption>
+        {% endif %}
     </figure>
+{% endmacro %}
+
+{% macro picture(filename, alt) %}
+    <picture>
+        <img alt="{{alt}}" src="{{filename}}">
+    </picture>
 {% endmacro %}

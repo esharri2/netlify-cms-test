@@ -2,13 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+.cmp-caption {
+  @apply italic;
+}
+
 .cmp-h1 {
-  @apply font-title text-6xl;
+  @apply font-title text-4xl leading-none my-4;
+}
+
+.cmp-h2 {
+  @apply font-title text-2xl leading-none my-4;
+}
+
+@screen lg {
+  .cmp-h1 {
+    @apply text-6xl;
+  }
+}
+
+.cmp-link-button {
+  @apply text-white bg-black p-4 inline-block;
 }
 
 .cmp-markdown p {
   @apply py-4;
 }
+
+.cmp-markdown ul {
+  @apply ml-4;
+}
+
+.cmp-markdown li {
+  @apply list-disc;
+}
+
 
 /* CSS components */
 /* .btn-link {

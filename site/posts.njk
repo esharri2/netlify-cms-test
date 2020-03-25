@@ -8,9 +8,19 @@ pagination:
   alias: posts
 ---
 
-<h1 class="cmp-heading">Posts</h1>
+<h1 class="cmp-h1">Posts</h1>
 {% for post in posts %}
-  <h2>{{ post.data.title }}</h2>
-  {{ post.templateContent | safe}}
+  <article class="mt-4">
+    <h2 class="cmp-h2">{{ post.data.title }}</h2>
+    {% if post.data.date %}
+      <p>{{post.data.date | prettyDate}}</p>
+    {% endif %}
+    {% if post.data.image %}
+      <img class="my-4" src="{{post.data.image}}"/>
+    {% endif %}
+    <div class="cmp-markdown">
+      {{ post.templateContent | safe}}
+    </div>
+  </article>
 {% endfor %}
 </ol>

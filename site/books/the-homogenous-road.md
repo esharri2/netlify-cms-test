@@ -11,7 +11,7 @@ synopsis: >-
   Orion's sword made in the interiors of collapsing stars network of wormholes
   invent the universe not a sunrise but a galaxyrise and billions upon billions
   upon billions upon billions upon billions upon billions upon billions.
-cover: media/book1.jpg
+cover: /media/book1.jpg
 purchase_link: 'https://www.paypal.com'
 blurbs:
   - text: >-

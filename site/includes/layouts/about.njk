@@ -3,10 +3,10 @@ layout: default
 eleventyNavigation:
   key: About
 ---
-{% from "../macros/picture.njk" import picture %}
+{% from "../macros/picture.njk" import figure %}
 
 <h1 class="cmp-h1">About</h1>
 <div class="cmp-markdown">
-  {{ picture(author_image.file, author_image.byline) }}
+  {{ figure(author_image.file, "", author_image.byline, 'p-6 max-w-xl md:float-right') }}
   {{ content | safe }}
 </div>

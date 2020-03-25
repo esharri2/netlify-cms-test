@@ -1,7 +1,21 @@
-<h1>I'm a book</h1>
+---
+layout: default
+---
+<div>
+    <h1 class="cmp-h1 mb-4">{{title}}</h1>
+    <img class="block max-w-md mb-4" src="{{cover}}"/>
+    {% if purchase_link %}
+        <a class="cmp-link-button my-4" href="{{purchase_link}}">Click to purchase</a>
+    {% endif %}
+    {% if synopsis%}
+        <p class="my-4">{{synopsis}}</p>
+    {% endif %}
+    {% for blurb in blurbs %}
+        <div class="my-4">
+            <p class="italic mb-2">"{{blurb.text}}"</p>
+            <p>{{blurb.attribution}}
+        </div>
+    {% endfor %}
 
-<main>{{ book.title}}</main>
+</div>
 
-{{title}}
-
-{{data.title}}

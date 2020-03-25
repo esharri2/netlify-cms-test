@@ -12,7 +12,15 @@ module.exports = {
     extend: {
       spacing: {
         "almost-full": "80vh"
+      },
+      transitionProperty: {
+        height: "height",
+        opacity: "opacity"
       }
     }
+  },
+  variants: {
+    height: ["group-hover"],
+    opacity: ["group-hover"]
   }
 };
