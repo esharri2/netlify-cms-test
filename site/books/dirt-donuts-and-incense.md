@@ -9,7 +9,7 @@ synopsis: >-
   through love courage of our questions stirred by starlight how far away?
   Tingling of the spine rich in heavy atoms extraordinary claims require
   extraordinary evidence
-cover: media/book4.jpg
+cover: /media/book4.jpg
 purchase_link: 'https://www.powells.com'
 blurbs:
   - text: >-
