@@ -4,13 +4,14 @@ eleventyNavigation:
   key: Books
 pagination:
   data: collections.book
-  size: 100
+  size: 2
   alias: books
 ---
 
 <h1 class="cmp-h1">Books</h1>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-3 row-gap-6">
 
+
+<div class="grid grid-cols-1 md:grid-cols-4 gap-3 row-gap-6">
   {% for book in books %}
     <div>
       <a class="group block relative" href="/books/{{book.data.title | slug}}">
@@ -20,6 +21,6 @@ pagination:
       <div class="text-xl text-center">{{book.data.title}}</div>
     </div>
   {% endfor %}
-
-
 </div>
+
+{% include "./includes/components/pagination.njk" %}

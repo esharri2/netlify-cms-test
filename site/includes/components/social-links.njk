@@ -1,0 +1,19 @@
+{% if socialMedia %}
+    <ul class="flex">
+        {% if socialMedia.facebook_url %}
+        <li>
+            <a class="w-8 block mr-4" href="{{socialMedia.facebook_url}}"><img class="w-full" alt="" src="/media/icons/facebook.svg"/></a>
+        </li>
+        {% endif %}
+        {% if socialMedia.twitter_url %}
+        <li>
+            <a class="w-8 block mr-4" href="{{socialMedia.twitter_url}}"><img  alt="" src="/media/icons/twitter.svg"/></a>
+        </li>
+        {% endif %}
+        {% if socialMedia.instagram_url %}
+        <li>
+            <a class="w-8 block mr-4" href="{{socialMedia.instagram_url}}"><img alt="" src="/media/icons/instagram.svg"/></a>
+        </li>
+        {% endif %}
+    </ul>
+{% endif %}

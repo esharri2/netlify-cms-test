@@ -67,7 +67,6 @@ collections: # A list of collections the CMS should be able to edit
                 "bulleted-list",
                 "numbered-list",
               ]
-
   - name: "contact"
     label: "Contact information"
     description: "Contact information and social media links."
@@ -94,7 +93,7 @@ collections: # A list of collections the CMS should be able to edit
               - { label: "Purpose", name: "purpose", widget: "string" }
       - name: "social"
         label: "Social media links"
-        file: "site/data/social-media.json"
+        file: "site/data/socialMedia.json"
         fields:
           - {
               label: "Facebook",
@@ -206,3 +205,21 @@ collections: # A list of collections the CMS should be able to edit
           required: false,
         }
       - { label: "Link", name: "link", widget: "string", required: false }
+  - name: "events"
+    label: "Events"
+    label_singular: "event"
+    description: "Schedule of events"
+    folder: "site/events"
+    format: "json"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          dateFormat: "YYYY-MM-DD",
+          timeFormat: "HH:mm"
+        }

@@ -14,7 +14,9 @@ module.exports = config => {
 
   // Include our static assets
   config.addPassthroughCopy("site/admin");
-  config.addPassthroughCopy({"site/media/uploads" : "site/media"});
+  config.addPassthroughCopy({"site/media/uploads" : "/media"});
+  config.addPassthroughCopy({"site/media/icons": "/media/icons" });
+
   config.addPassthroughCopy({ "site/assets": "/" });
   config.setUseGitIgnore(false);
 

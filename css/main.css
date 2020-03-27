@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.cmp-button {
+  @apply text-white bg-black p-4 inline-block;
+}
+
 .cmp-caption {
   @apply italic;
 }
@@ -18,6 +22,10 @@
   .cmp-h1 {
     @apply text-6xl;
   }
+}
+
+.cmp-input {
+  @apply block border-black border-solid border w-full;
 }
 
 .cmp-link-button {
