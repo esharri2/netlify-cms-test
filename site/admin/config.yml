@@ -210,7 +210,6 @@ collections: # A list of collections the CMS should be able to edit
     label_singular: "event"
     description: "Schedule of events"
     folder: "site/events"
-    format: "json"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }

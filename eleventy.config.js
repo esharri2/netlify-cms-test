@@ -32,7 +32,7 @@ module.exports = config => {
 
   // You can return your Config object (optional).
   return {
-    templateFormats: ["md", "njk"],
+    templateFormats: ["md", "njk", "json"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     passthroughFileCopy: true,

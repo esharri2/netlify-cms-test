@@ -2,7 +2,17 @@
 layout: default
 eleventyNavigation:
   key: Events
+pagination:
+  data: collections.event
+  size: 100
+  alias: events
 ---
 <h1 class="cmp-h1">Events</h1>
+
+{% for event in events %}
+Yo
+  <p>{{event.title}}</p>
+{% endfor %}
+
 
 
