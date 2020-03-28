@@ -220,5 +220,5 @@ collections: # A list of collections the CMS should be able to edit
           name: "date",
           widget: "datetime",
           dateFormat: "YYYY-MM-DD",
-          timeFormat: "LT"
+          timeFormat: "hh:mm a"
         }
