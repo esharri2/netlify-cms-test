@@ -16,18 +16,21 @@ module.exports = config => {
   config.addPassthroughCopy("site/admin");
   config.addPassthroughCopy({"site/media/uploads" : "/media"});
   config.addPassthroughCopy({"site/media/icons": "/media/icons" });
-
   config.addPassthroughCopy({ "site/assets": "/" });
   config.setUseGitIgnore(false);
 
   // Short codes
   config.addPairedShortcode("markdown", content => markdown.render(content));
+  config.addNunjucksShortcode("now", ()=> Date.now());
+
 
   // Filters
   config.addFilter("prettyDate", (value) => {
     const date = new Date(Date.parse(value));
     return date.toLocaleDateString('en-US');
   });
+
+  // Custom collections
 
 
   // You can return your Config object (optional).

@@ -9,10 +9,21 @@ pagination:
 ---
 <h1 class="cmp-h1">Events</h1>
 
+<ul>
 {% for event in events %}
-Yo
-  <p>{{event.title}}</p>
+ {% now %}
+  <li class="border-solid border-black border-b py-4">
+    <p class="text-xl">{{event.data.title}}</p>
+    <p>{{event.data.date}}</p> 
+    <p>{{event.data.location}}</p>
+    {% if event.data.description %}
+      <p class="block">{{event.data.description}}</p>
+    {% endif %}
+  </li>
 {% endfor %}
+
+
+</ul>
 
 
 
