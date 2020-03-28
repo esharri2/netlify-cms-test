@@ -10,14 +10,13 @@ pagination:
 <h1 class="cmp-h1">Events</h1>
 
 <ul>
-{% for event in events %}
- {% now %}
+{% for event in events | reverse %}
   <li class="border-solid border-black border-b py-4">
     <p class="text-xl">{{event.data.title}}</p>
-    <p>{{event.data.date}}</p> 
+    <p>{{event.data.date | prettyDateAndTime}}</p> 
     <p>{{event.data.location}}</p>
     {% if event.data.description %}
-      <p class="block">{{event.data.description}}</p>
+      <p class="block mt-2">{{event.data.description}}</p>
     {% endif %}
   </li>
 {% endfor %}

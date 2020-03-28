@@ -21,13 +21,21 @@ module.exports = config => {
 
   // Short codes
   config.addPairedShortcode("markdown", content => markdown.render(content));
-  config.addNunjucksShortcode("now", ()=> Date.now());
-
 
   // Filters
-  config.addFilter("prettyDate", (value) => {
+  config.addFilter("prettyDateAndTime", (value) => {
     const date = new Date(Date.parse(value));
-    return date.toLocaleDateString('en-US');
+    const options = {
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true
+    };
+    return `${date.toLocaleDateString('en-US')} - ${date.toLocaleTimeString('en-us', options)}`
+  });
+
+  config.addFilter("prettyDate", value => {
+    const date = new Date(Date.parse(value));
+    return date.toLocaleDateString("en-US");
   });
 
   // Custom collections

@@ -1,14 +1,14 @@
 ---
 layout: default
 eleventyNavigation:
-  key: Posts
+  key: News
 pagination:
   data: collections.post
   size: 100
   alias: posts
 ---
 
-<h1 class="cmp-h1">Posts</h1>
+<h1 class="cmp-h1">News</h1>
 {% for post in posts %}
   <article class="mt-4">
     <h2 class="cmp-h2">{{ post.data.title }}</h2>
