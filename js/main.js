@@ -1,2 +1,3 @@
 import "../css/main.css";
-import "./scrollAnimations";
+import "./backToTop.js";
+import "./clickToCopy.js";

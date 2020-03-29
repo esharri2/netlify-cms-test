@@ -44,13 +44,9 @@
   @apply list-disc;
 }
 
+/* General */
 
-/* CSS components */
-/* .btn-link {
-  @apply flex w-full my-1 p-2 justify-between border border-jet border-solid;
+svg {
+  max-width: 100%;
+  max-height: 100%;
 }
-
-.btn-link:focus,
-.btn-link:hover {
-  @apply font-bold;
-} */

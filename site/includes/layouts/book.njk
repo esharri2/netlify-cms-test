@@ -3,7 +3,11 @@ layout: default
 ---
 <div>
     <h1 class="cmp-h1 mb-4">{{title}}</h1>
-    <img class="block max-w-md mb-4" src="{{cover}}"/>
+    <img 
+        class="block max-w-md mb-4" 
+        srcset="{% srcset cover %}" 
+        src="{{cover}}" 
+        alt="The book cover for {{title}}"/>
     {% if purchase_link %}
         <a class="cmp-link-button my-4" href="{{purchase_link}}">Click to purchase</a>
     {% endif %}
@@ -16,6 +20,5 @@ layout: default
             <p>{{blurb.attribution}}
         </div>
     {% endfor %}
-
 </div>
 

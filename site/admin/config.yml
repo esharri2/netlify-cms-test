@@ -21,6 +21,7 @@ collections: # A list of collections the CMS should be able to edit
         file: "site/data/general.json"
         fields:
           - { label: "Title", name: "site_title", widget: "string" }
+          - { label: "Domain name", name: "site_domain", widget: "string"}
           - {
               label: "Subtitle",
               name: "site_subtitle",
@@ -119,7 +120,6 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/posts"
     create: true
     description: "Updates and announcements."
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: # The fields each document in this collection have
       - label: "Title"
         name: "title"

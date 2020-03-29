@@ -22,5 +22,6 @@ module.exports = {
   variants: {
     height: ["group-hover"],
     opacity: ["group-hover"]
-  }
+  },
+  plugins: [require("tailwindcss-accessibility")]
 };
