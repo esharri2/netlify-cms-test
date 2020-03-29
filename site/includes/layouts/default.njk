@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html class="h-full" lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,11 +41,13 @@
         <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     </head>
 
-    <body class="text-black">
+    <body class="text-black h-full">
         {% include "components/skip-to-content.njk" %} 
         {% include "components/header.njk" %}         
-        <main id="main" class="mx-auto px-6 my-6 max-w-screen-lg">{{ content | safe }}</main>
+        <main id="main" class="mx-auto px-6 mt-6 mb-16 min-h-full max-w-screen-lg">{{ content | safe }}</main>
         {% include "components/back-to-top.njk" %} 
+        {% include "components/footer.njk" %} 
     </body>
+
 
 </html>

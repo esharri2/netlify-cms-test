@@ -2,6 +2,8 @@ const sharp = require("sharp");
 const path = require("path");
 var glob = require("glob");
 
+// TODO make it so an image does not get stretched above native size
+
 const mediaDir = "./dist/media/*.*";
 const sizes = [
   // { tag: "xl", size: 1440 },
@@ -19,7 +21,7 @@ const createImages = async image => {
   sizes.forEach(size => {
     sharp(image)
       .resize(size.size)
-      .toFile(`./dist/media/v/${name}-${size.tag}${ext}`);
+      .toFile(`./dist/media/${name}-${size.tag}${ext}`);
   });
 };
 

@@ -10,6 +10,10 @@ module.exports = {
       body: ["Source Sans Pro", "Helvetica", "san serif"]
     },
     extend: {
+      opacity: {
+        "80": ".8",
+        "90": ".9"
+      },
       spacing: {
         "almost-full": "80vh"
       },

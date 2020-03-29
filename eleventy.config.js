@@ -27,13 +27,14 @@ module.exports = config => {
 
   // Short codes
   config.addPairedShortcode("markdown", content => markdown.render(content));
+  config.addNunjucksShortcode("currentYear", () => new Date().getFullYear().toString());
   config.addNunjucksShortcode("srcset", img => {
     const {dir, name, ext} = path.parse(img);
     // TODO this duplicates size names and sizes that are in imageConverter.js; could be simplified.
     return `
-      ${dir}/v/${name}-lg${ext} 1080w, 
-      ${dir}/v/${name}-md${ext} 720w,
-      ${dir}/v/${name}-sm${ext} 480w
+      ${dir}/${name}-lg${ext} 1080w, 
+      ${dir}/${name}-md${ext} 720w,
+      ${dir}/${name}-sm${ext} 480w
     `;
   });
 
