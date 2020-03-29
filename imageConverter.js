@@ -21,7 +21,9 @@ const createImages = async image => {
   sizes.forEach(size => {
     sharp(image)
       .resize(size.size)
-      .toFile(`./dist/media/${name}-${size.tag}${ext}`);
+      .toFile(`./dist/media/${name}-${size.tag}${ext}`).then(()=>{
+        console.log("success!");
+      });
   });
 };
 
