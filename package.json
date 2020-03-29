@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production npm-run-all process-images webpack-prod eleventy",
+    "build": "NODE_ENV=production run-s process-images webpack-prod eleventy",
     "dev": "npm-run-all --parallel webpack-dev eleventy-dev",
     "start": "npm-run-all --parallel webpack-dev eleventy-dev",
     "process-images": "node imageConverter.js",
