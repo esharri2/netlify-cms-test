@@ -21,13 +21,15 @@ const createImages = async image => {
   sizes.forEach(size => {
     sharp(image)
       .resize(size.size)
-      .toFile(`./dist/media/${name}-${size.tag}${ext}`).then(()=>{
+      .toFile(`./dist/media/${name}-${size.tag}${ext}`)
+      .then(() => {
         console.log("success!");
       });
   });
 };
 
 const init = () => {
+  console.log("Init image resizing....");
   const imageNames = getImageNames();
   imageNames.forEach(image => {
     createImages(image);
