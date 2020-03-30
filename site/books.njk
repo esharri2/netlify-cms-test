@@ -2,6 +2,7 @@
 layout: default
 eleventyNavigation:
   key: Books
+  order: 2
 pagination:
   data: collections.book
   size: 36
@@ -11,7 +12,7 @@ pagination:
 <h1 class="cmp-h1">Books</h1>
 
 <div class="grid grid-cols-1 md:grid-cols-4 gap-3 row-gap-6">
-  {% for book in books %}
+  {% for book in books | reverse %}
     <div>
       <a class="group block relative" href="/books/{{book.data.title | slug}}">
         <img 

@@ -44,7 +44,7 @@
     <body class="text-black h-full">
         {% include "components/skip-to-content.njk" %} 
         {% include "components/header.njk" %}         
-        <main id="main" class="mx-auto px-6 mt-6 mb-16 min-h-full max-w-screen-lg">{{ content | safe }}</main>
+        <main id="main" class="mx-auto px-6 mb-16 min-h-full max-w-screen-lg md:mt-6 ">{{ content | safe }}</main>
         {% include "components/back-to-top.njk" %} 
         {% include "components/footer.njk" %} 
     </body>

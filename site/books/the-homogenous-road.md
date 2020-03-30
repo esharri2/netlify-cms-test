@@ -12,6 +12,7 @@ synopsis: >-
   invent the universe not a sunrise but a galaxyrise and billions upon billions
   upon billions upon billions upon billions upon billions upon billions.
 cover: /media/book1.jpg
+date: 2020-03-21
 purchase_link: 'https://www.paypal.com'
 blurbs:
   - text: >-

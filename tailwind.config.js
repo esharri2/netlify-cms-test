@@ -1,3 +1,5 @@
+const headerHeight = "5rem";
+
 module.exports = {
   theme: {
     colors: {
@@ -15,7 +17,11 @@ module.exports = {
         "90": ".9"
       },
       spacing: {
-        "almost-full": "80vh"
+        "almost-full": "80vh",
+        "header" : headerHeight
+      },
+      inset: {
+        "headerHeight" : headerHeight
       },
       transitionProperty: {
         height: "height",
@@ -26,6 +32,5 @@ module.exports = {
   variants: {
     height: ["group-hover"],
     opacity: ["group-hover"]
-  },
-  plugins: [require("tailwindcss-accessibility")]
+  }
 };

@@ -11,5 +11,6 @@ synopsis: >-
   extraterrestrial observer and billions upon billions upon billions upon
   billions upon billions upon billions upon billions.
 cover: /media/book2.jpg
+date: 2020-03-21
 purchase_link: 'https://www.paypal.com'
 ---

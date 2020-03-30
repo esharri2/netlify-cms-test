@@ -1,22 +1,24 @@
-{# <nav class="font-white">
-{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
-</nav> #}
+{# 'sr-only' is toggled off when mobile nav is opened. #}
+{# did it this way so mobile sr users don't have to toggle the nav; it's just there. #}
+<nav class="sr-only text-white bg-black absolute top-headerHeight md:static md:not-sr-only md:px-4">
 
-<nav class="text-white">
 {% set navPages = collections.all | eleventyNavigation %}
 
 {% macro renderNavListItem(entry) -%}
-<li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
+
+{% set activeClass %}{% if entry.url == page.url %}cmp-active-link{% endif %}{% endset %}
+
+<li class="{{activeClass}} border-b border-white md:border-none">
   <a class="block p-6" href="{{ entry.url | url }}">{{ entry.title }}</a>
-{%- if entry.children.length -%}
+{# {%- if entry.children.length -%}
   <ul>
     {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
   </ul>
-{%- endif -%}
+{%- endif -%} #}
 </li>
 {%- endmacro %}
 
-<ul class="flex items-center justify-center">
+<ul class="flex flex-col w-screen md:flex-row md:w-auto">
 {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
 </ul>
 </nav>

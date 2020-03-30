@@ -20,8 +20,18 @@ collections: # A list of collections the CMS should be able to edit
         label: "General site information"
         file: "site/data/general.json"
         fields:
-          - { label: "Title", name: "site_title", widget: "string" }
-          - { label: "Domain name", name: "site_domain", widget: "string"}
+          - {
+              label: "Title",
+              name: "site_title",
+              widget: "string",
+              required: true,
+            }
+          - {
+              label: "Domain name",
+              name: "site_domain",
+              widget: "string",
+              required: true,
+            }
           - {
               label: "Subtitle",
               name: "site_subtitle",
@@ -124,7 +134,6 @@ collections: # A list of collections the CMS should be able to edit
       - label: "Title"
         name: "title"
         widget: "string"
-        tagname: "h1"
       - label: "Publish date"
         name: "date"
         widget: "datetime"
@@ -145,7 +154,7 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/books"
     create: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Title", name: "title", widget: "string", required: true }
       - {
           label: "Publisher",
           name: "publisher",
@@ -163,7 +172,15 @@ collections: # A list of collections the CMS should be able to edit
           label: "Cover image",
           name: "cover",
           widget: "image",
-          required: false,
+          required: true,
+        }
+      - {
+          label: "Publication date",
+          name: "date",
+          widget: "datetime",
+          dateFormat: "YYYY-MM-DD",
+          format: "YYYY-MM-DD",
+          required: true
         }
       - {
           label: "Purchase link",
@@ -214,11 +231,16 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Location", name: "location", widget: "string" }
-      - { label: "Description", name: "description", widget: "text", required: false }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: false,
+        }
       - {
           label: "Date",
           name: "date",
           widget: "datetime",
           dateFormat: "YYYY-MM-DD",
-          timeFormat: "hh:mm a"
+          timeFormat: "hh:mm a",
         }

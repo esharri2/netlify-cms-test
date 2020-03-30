@@ -10,6 +10,7 @@ synopsis: >-
   Tingling of the spine rich in heavy atoms extraordinary claims require
   extraordinary evidence
 cover: /media/book4.jpg
+date: 2012-03-19
 purchase_link: 'https://www.powells.com'
 blurbs:
   - text: >-
