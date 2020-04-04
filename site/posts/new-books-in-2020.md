@@ -1,7 +1,7 @@
 ---
 title: New books in 2020
-date: 2020-03-21
-image: /media/books.webp
+date: 2020-03-21T00:00:00.000Z
+image: /media/bookshelf.jpg
 ---
 
 The carbon in our apple pies gathered by gravity not a sunrise but a galaxyrise
