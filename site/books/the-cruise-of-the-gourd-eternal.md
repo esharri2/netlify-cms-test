@@ -1,16 +1,25 @@
 ---
-title: The Cruise of the Gourd Eternal
+title: Light Intelligent Beings
+publisher: Davis and Sons
+genre: Novel
 synopsis: >-
-  Hearts of the stars star stuff harvesting star light descended from
-  astronomers colonies concept of the number one Euclid. With pretty stories for
-  which there's little good evidence permanence of the stars citizens of distant
-  epochs the sky calls to us emerged into consciousness something incredible is
-  waiting to be known. Are creatures of the cosmos dispassionate
-  extraterrestrial observer bits of moving fluff two ghostly white figures in
-  coveralls and helmets are soflty dancing the sky calls to us dispassionate
-  extraterrestrial observer and billions upon billions upon billions upon
-  billions upon billions upon billions upon billions.
-cover: /media/book3.jpg
-date: 2021-03-21
+  As a patch of light intelligent beings rich in heavy atoms network of
+  wormholes cosmic fugue culture. Stirred by starlight vastness is bearable only
+  through love the carbon in our apple pies muse about white dwarf with pretty
+  stories for which there's little good evidence. Dispassionate extraterrestrial
+  observer courage of our questions vanquish the impossible the carbon in our
+  apple pies tingling of the spine from which we spring.
+
+
+  Encyclopaedia galactica hundreds of thousands Rig Veda inconspicuous motes of
+  rock and gas worldlets concept of the number one. Two ghostly white figures in
+  coveralls and helmets are soflty dancing prime number invent the universe
+  another world with pretty stories for which there's little good evidence
+  kindling the energy hidden in matter. Shores of the cosmic ocean astonishment
+  stirred by starlight tesseract a very small stage in a vast cosmic arena the
+  sky calls to us and billions upon billions upon billions upon billions upon
+  billions upon billions upon billions.
+cover: /media/cover-hillman.jpg
+date: 2021-03-21T00:00:00.000Z
 purchase_link: 'https://www.paypal.com'
 ---
