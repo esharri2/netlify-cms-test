@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production run-s webpack-prod eleventy process-images",
+    "build": "NODE_ENV=production run-s clean webpack-prod eleventy process-images",
     "dev": "npm-run-all --parallel webpack-dev eleventy-dev",
     "start": "npm-run-all --parallel webpack-dev eleventy-dev",
-    "process-images": "node imageConverter.js",
+    "clean": "node build-utils/clean.js",
+    "process-images": "node build-utils/imageConverter.js",
     "eleventy": "ELEVENTY_ENV=production eleventy --config=eleventy.config.js",
     "eleventy-dev": "ELEVENTY_ENV=development eleventy --config=eleventy.config.js --watch --serve",
     "webpack-prod": "webpack --mode=production --config webpack.prod.js",
@@ -31,6 +32,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.0",
     "cssnano": "^4.1.10",
+    "del": "^5.1.0",
     "mini-css-extract-plugin": "^0.9.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^7.0.25",
@@ -45,6 +47,7 @@
   "dependencies": {
     "eleventy-plugin-svg-contents": "^0.5.1",
     "glob": "^7.1.6",
+    "rimraf": "^3.0.2",
     "sharp": "^0.25.2"
   }
 }

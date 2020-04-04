@@ -2,13 +2,19 @@
 layout: default
 ---
 
-<div class="h-almost-full flex flex-col justify-center items-center">
-  <h1 class="cmp-h1">{{general.site_title}}</h1>
-  {% if general.site_subtitle %}
-    <p>{{general.site_subtitle}}</p>
-  {% endif %}
-</div>
 
+<div class="kf-fade-in h-screen flex flex-col justify-center items-center z-10">
+  <div class="mb-4">
+    <h1 class="text-6xl text-center sm:text-8xl leading-none font-title uppercase">{{general.site_title}}</h1>
+    {% if general.site_subtitle %}
+      <p class="text-center">{{general.site_subtitle}}</p>
+    {% endif %}
+  </div>
+  {% include "components/nav-simple.njk" %} 
+</div>
+<div class="cmp-cover-image fixed inset-0">
+  <img class="cmp-cover-image kf-slight-fade-in" srcset="{% srcset 'media/plant-close.jpg' %}"/>
+</div>
 
 
 <script>

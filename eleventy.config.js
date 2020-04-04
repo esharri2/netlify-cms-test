@@ -17,10 +17,13 @@ module.exports = config => {
   // Layout alias
   config.addLayoutAlias("default", "layouts/default.njk");
   config.addLayoutAlias("about", "layouts/about.njk");
+  config.addLayoutAlias("container", "layouts/container.njk");
+
 
   // Include our static assets
   config.addPassthroughCopy("site/admin");
   config.addPassthroughCopy({"site/media/uploads" : "/media"});
+  config.addPassthroughCopy({ "site/media": "/media" });
   config.addPassthroughCopy({"site/media/icons": "/media/icons" });
   config.addPassthroughCopy({ "site/assets": "/" });
   config.setUseGitIgnore(false);

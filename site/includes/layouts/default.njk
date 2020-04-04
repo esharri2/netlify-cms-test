@@ -1,15 +1,15 @@
 <!doctype html>
-<html class="h-full" lang="en">
+<html class="h-full bg-light" lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Netlify CMS test</title>
-        <meta name="description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
+        <title>{{general.site_title}}</title>
+        <meta name="description" content="{{general.site_descript}}">
         {# {% if page.fileSlug === "blog" %}
             <meta name="robots" content="noindex,follow"/>
         {% endif %} #}
 
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Ultra&display=swap" rel="stylesheet">      
+        <link href="https://fonts.googleapis.com/css?family=Spartan|Roboto&display=swap" rel="stylesheet">      
         {# if your site's entire CSS comes in under 14kb, you may want to inline in the head #}
         {# include main.css if in development mode #}
         {% if helpers.environment == "development" %}
@@ -41,12 +41,16 @@
         <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     </head>
 
-    <body class="text-black h-full">
-        {% include "components/skip-to-content.njk" %} 
-        {% include "components/header.njk" %}         
-        <main id="main" class="mx-auto px-6 mb-16 min-h-full max-w-screen-lg md:mt-6 ">{{ content | safe }}</main>
+    <body class="text-dark h-full">
+        {% if page.fileSlug !== '' %}
+            {% include "components/skip-to-content.njk" %} 
+            {% include "components/header.njk" %} 
+        {% endif %}        
+        <main id="main" class="mx-auto px-6 min-h-full max-w-screen-lg">{{ content | safe }}</main>
         {% include "components/back-to-top.njk" %} 
-        {% include "components/footer.njk" %} 
+        {% if page.fileSlug !== '' %}
+            {% include "components/footer.njk" %} 
+        {% endif %}
     </body>
 
 

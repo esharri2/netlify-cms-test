@@ -9,7 +9,7 @@
 {% set activeClass %}{% if entry.url == page.url %}cmp-active-link{% endif %}{% endset %}
 
 <li class="{{activeClass}} border-b border-white md:border-none">
-  <a class="block p-6" href="{{ entry.url | url }}">{{ entry.title }}</a>
+  <a class="cmp-link uppercase font-title block p-6" href="{{ entry.url | url }}">{{ entry.title }}</a>
 {# {%- if entry.children.length -%}
   <ul>
     {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
