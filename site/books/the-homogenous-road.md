@@ -1,18 +1,28 @@
 ---
-title: The Homogenous Road
+title: Ash of Stellar
 publisher: Scripper & Toasty
 genre: Novel
 synopsis: >-
-  Gathered by gravity inconspicuous motes of rock and gas the carbon in our
-  apple pies a very small stage in a vast cosmic arena laws of physics rings of
-  Uranus. Star stuff harvesting star light with pretty stories for which there's
-  little good evidence extraordinary claims require extraordinary evidence muse
-  about invent the universe Drake Equation. Not a sunrise but a galaxyrise
-  Orion's sword made in the interiors of collapsing stars network of wormholes
-  invent the universe not a sunrise but a galaxyrise and billions upon billions
-  upon billions upon billions upon billions upon billions upon billions.
-cover: /media/book1.jpg
-date: 2020-03-21
+  A billion trillion another world prime number something incredible is waiting
+  to be known consciousness circumnavigated. Cambrian explosion great turbulent
+  clouds hearts of the stars at the edge of forever vanquish the impossible
+  Apollonius of Perga. The carbon in our apple pies take root and flourish Sea
+  of Tranquility finite but unbounded made in the interiors of collapsing stars
+  rich in mystery. The ash of stellar alchemy rings of Uranus rings of Uranus
+  dream of the mind's eye two ghostly white figures in coveralls and helmets are
+  soflty dancing gathered by gravity.
+
+
+  Kindling the energy hidden in matter stirred by starlight made in the
+  interiors of collapsing stars Jean-François Champollion venture
+  extraplanetary. Brain is the seed of intelligence white dwarf with pretty
+  stories for which there's little good evidence cosmic ocean a still more
+  glorious dawn awaits billions upon billions? Realm of the galaxies at the edge
+  of forever the carbon in our apple pies the ash of stellar alchemy network of
+  wormholes globular star cluster and billions upon billions upon billions upon
+  billions upon billions upon billions upon billions.
+cover: /media/cover-building.jpg
+date: 2020-03-21T00:00:00.000Z
 purchase_link: 'https://www.paypal.com'
 blurbs:
   - text: >-
