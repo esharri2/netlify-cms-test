@@ -1,5 +1,5 @@
 ---
-title: 'Dirt, Donuts, and Incense 2'
+title: Something Incredible
 publisher: Cooper Hughey
 genre: Memoir
 synopsis: >-
@@ -9,8 +9,8 @@ synopsis: >-
   through love courage of our questions stirred by starlight how far away?
   Tingling of the spine rich in heavy atoms extraordinary claims require
   extraordinary evidence
-cover: /media/book4.jpg
-date: 2020-01-21
+cover: /media/cover-poolside.jpg
+date: 2020-01-21T00:00:00.000Z
 purchase_link: 'https://www.powells.com'
 blurbs:
   - text: >-
