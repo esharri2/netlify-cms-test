@@ -19,7 +19,6 @@ collections: # A list of collections the CMS should be able to edit
       - name: "general"
         label: "General site information"
         file: "site/data/general.json"
-        description: "GENERAL DESC"
         fields:
           - {
               label: "Site title",
@@ -42,8 +41,7 @@ collections: # A list of collections the CMS should be able to edit
       - name: "titles"
         label: "Page titles"
         file: "site/data/titles.json"
-        hint: "WHAT UP IM A HINT"
-        description: "IM DESC"
+        description: "A description about the title section"
         fields:
           - {
               name: "about",
@@ -258,6 +256,14 @@ collections: # A list of collections the CMS should be able to edit
           name: "genre",
           widget: "string",
           required: false,
+        }
+      - {
+          label: "Publication date",
+          name: "date",
+          widget: "datetime",
+          dateFormat: "YYYY-MM-DD",
+          format: "YYYY-MM-DD",
+          required: true,
         }
       - { label: "Link", name: "link", widget: "string", required: false }
   - name: "events"
