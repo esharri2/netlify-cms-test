@@ -1,6 +1,6 @@
 {# 'sr-only' is toggled off when mobile nav is opened. #}
 {# did it this way so mobile sr users don't have to toggle the nav; it's just there. #}
-<nav class="sr-only bg-light absolute top-headerHeight md:ml-auto md:static md:not-sr-only md:px-4">
+<nav class="sr-only w-full z-10 bg-light absolute top-headerHeight md:ml-auto md:static md:not-sr-only md:px-4">
 
 {% set navPages = collections.all | eleventyNavigation %}
 
@@ -13,7 +13,7 @@
 </li>
 {%- endmacro %}
 
-<ul class="flex flex-col w-screen md:flex-row md:w-auto shadow-lg md:shadow-none">
+<ul class="flex flex-col w-full md:flex-row md:w-auto shadow-lg md:shadow-none">
   {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
 </ul>
 </nav>

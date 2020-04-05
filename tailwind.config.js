@@ -26,7 +26,7 @@ module.exports = {
         headerHeight: headerHeight,
       },
       maxHeight: {
-        "lg": "40rem"
+        lg: "40rem",
       },
       opacity: {
         "80": ".8",
@@ -38,6 +38,7 @@ module.exports = {
       },
       transitionProperty: {
         height: "height",
+        transform: "transform",
         opacity: "opacity",
       },
     },
