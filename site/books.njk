@@ -11,9 +11,9 @@ pagination:
 
 <h1 class="cmp-h1">Books</h1>
 
-<div class="grid grid-cols-1 md:grid-cols-4 gap-3 row-gap-6">
+<div class="font-title grid grid-cols-1 md:grid-cols-4 gap-3 row-gap-6">
   {% for book in books | reverse %}
-    <div>
+    <div class="mt-4">
       <a class="group block relative" href="/books/{{book.data.title | slug}}">
         <img 
           class="w-full md:w-auto" 
@@ -21,9 +21,9 @@ pagination:
           src="{{book.data.cover}}"
           sizes="(min-width: 767px) 250px, 100vw" 
           alt="{{book.data.title}} cover art" />
-        <div class="absolute flex justify-center items-center text-xl text-white bg-black inset-x-0 top-0 h-0 opacity-0 group-hover:h-full group-hover:opacity-75 transition-height duration-200 ease-out ">Learn more</div>
+        <div class="absolute flex justify-center items-center text-xl text-light bg-accent1 inset-x-0 top-0 h-0 opacity-0 active:none group-hover:h-full group-hover:opacity-75 transition-height duration-200 ease-out ">Learn more</div>
       </a>
-      <div class="text-xl text-center">{{book.data.title}}</div>
+      <div class="pt-2 uppercase text-md text-center">{{book.data.title}}</div>
     </div>
   {% endfor %}
 </div>

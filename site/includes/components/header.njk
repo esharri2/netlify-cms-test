@@ -1,9 +1,9 @@
-<header class="w-full relative h-header flex items-center md:px-4 md:justify-between shadow">     
+<header class="z-10 w-full shadow relative h-header flex items-center md:px-4 md:justify-between">     
   {# Nav is sr-only; sr users to not need this toggle button #}
-  <button aria-hidden="true" class="mx-4 text-dark fill-current w-8 h-8 js-nav-toggle md:hidden">
+  <button class="mx-4 text-dark fill-current w-8 h-8 js-nav-toggle md:hidden" aria-hidden="true">
     <span class="js-open-icon inline">{{ "/site/media/icons/menu.svg"| svgContents | safe }}</span>
     <span class="js-close-icon hidden">{{ "/site/media/icons/cross.svg"| svgContents | safe }}</span>
   </button>
-  <a class="cmp-h2 uppercase" href="/">{{general.site_title}}</a>   
-    {% include "./nav.njk" %}
+  <a class="cmp-h2 uppercase" href="/">{{general.site_title}}</a>  
+  {% include "./nav.njk" %}
 </header>

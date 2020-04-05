@@ -9,38 +9,42 @@ module.exports = {
     colors: {
       light: smoke,
       dark: eerie,
-      accent1: moss,
-      accent2: sapphire,
-      transparent: "transparent"
+      accent1: sapphire,
+      accent2: moss,
+      transparent: "transparent",
     },
     fontFamily: {
       title: ["Spartan", "Helvetica", "san serif"],
-      body: ["Roboto", "Helvetica", "san serif"]
+      body: ["Roboto", "Helvetica", "san serif"],
     },
     extend: {
       fontSize: {
         "7xl": "5rem",
-        "8xl": "6rem"
+        "8xl": "6rem",
+      },
+      inset: {
+        headerHeight: headerHeight,
+      },
+      maxHeight: {
+        "lg": "40rem"
       },
       opacity: {
         "80": ".8",
-        "90": ".9"
+        "90": ".9",
       },
       spacing: {
         "almost-full": "90vh",
-        "header" : headerHeight
-      },
-      inset: {
-        "headerHeight" : headerHeight
+        header: headerHeight,
       },
       transitionProperty: {
         height: "height",
-        opacity: "opacity"
-      }
-    }
+        opacity: "opacity",
+      },
+    },
   },
   variants: {
-    height: ["group-hover"],
-    opacity: ["group-hover"]
-  }
+    height: ["group-hover", "hover"],
+    margin: ["first"],
+    opacity: ["group-hover"],
+  },
 };

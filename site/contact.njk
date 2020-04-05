@@ -4,9 +4,11 @@ eleventyNavigation:
   key: Contact
   order: 10
 ---
-<h1 class="cmp-h1">Contact</h1>
+<h1 class="cmp-h1 text-center">Contact</h1>
 
-{% include "./includes/components/contact-form.njk" %}
-<div class="mt-6">
-    {% include "./includes/components/social-links.njk" %}
+<div class="mx-auto max-w-screen-sm">
+  {% include "./includes/components/contact-form.njk" %}
+  <div class="mt-6 flex justify-center text-dark">
+      {% include "./includes/components/social-links.njk" %}
+  </div>
 </div>

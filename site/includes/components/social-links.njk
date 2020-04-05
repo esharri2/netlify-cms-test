@@ -2,17 +2,17 @@
     <ul class="flex fill-current">
         {% if socialMedia.facebook_url %}
         <li>
-            <a class="w-8 block mr-4" href="{{socialMedia.facebook_url}}">{{ "/site/media/icons/facebook.svg"| svgContents | safe }}</a>
+            <a class="w-8 block mr-4 hover:text-accent1" href="{{socialMedia.facebook_url}}">{{ "/site/media/icons/facebook.svg"| svgContents | safe }}</a>
         </li>
         {% endif %}
         {% if socialMedia.twitter_url %}
         <li>
-            <a class="w-8 block mr-4" href="{{socialMedia.twitter_url}}">{{ "/site/media/icons/twitter.svg"| svgContents | safe }}</a>
+            <a class="w-8 block mr-4 hover:text-accent1" href="{{socialMedia.twitter_url}}">{{ "/site/media/icons/twitter.svg"| svgContents | safe }}</a>
         </li>
         {% endif %}
         {% if socialMedia.instagram_url %}
         <li>
-            <a class="w-8 block mr-4" href="{{socialMedia.instagram_url}}">{{ "/site/media/icons/instagram.svg"| svgContents | safe }}</a>
+            <a class="w-8 block mr-4 hover:text-accent1" href="{{socialMedia.instagram_url}}">{{ "/site/media/icons/instagram.svg"| svgContents | safe }}</a>
         </li>
         {% endif %}
     </ul>
