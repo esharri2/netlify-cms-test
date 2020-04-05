@@ -9,7 +9,7 @@ button, a, input, textarea {
 }
 
 .cmp-button {
-  @apply text-light bg-dark p-4 inline-block shadow;
+  @apply text-light bg-dark px-6 py-4 inline-block shadow;
 }
 
 .cmp-button:hover {
@@ -57,7 +57,7 @@ button, a, input, textarea {
 }
 
 .cmp-link-button {
-  @apply text-light bg-dark p-4 inline-block;
+  @apply text-light bg-dark px-6 py-4 inline-block;
 }
 
 .cmp-markdown {
@@ -72,12 +72,24 @@ button, a, input, textarea {
   @apply pt-0;
 }
 
-.cmp-markdown ul {
+.cmp-markdown ul, .cmp-markdown ol {
   @apply ml-4;
 }
 
-.cmp-markdown li {
+.cmp-markdown ul li {
   @apply list-disc;
+}
+
+.cmp-markdown ol li {
+  @apply list-decimal;
+}
+
+.cmp-markdown blockquote {
+  @apply p-4 bg-gray italic mb-4;
+}
+
+.cmp-markdown blockquote p {
+  @apply p-0;
 }
 
 /* General */

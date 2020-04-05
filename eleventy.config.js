@@ -58,6 +58,14 @@ module.exports = config => {
     return date.toLocaleDateString("en-US");
   });
 
+  config.addFilter("prettyMonthAndYear", (value) => {
+    const date = new Date(Date.parse(value));
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+    });
+  });
+
   return {
     templateFormats: ["md", "njk", "json"],
     markdownTemplateEngine: "njk",

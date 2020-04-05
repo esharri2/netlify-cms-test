@@ -9,7 +9,7 @@ pagination:
   alias: posts
 ---
 
-<h1 class="cmp-h1">News</h1>
+<h1 class="cmp-h1">{{ titles.posts if titles.posts else "News" }}</h1>
   <div>
   {% for post in posts | reverse %}
     <article class="mt-20 first:mt-8">

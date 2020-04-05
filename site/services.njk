@@ -1,0 +1,21 @@
+---
+layout: container
+eleventyNavigation:
+  key: Services
+  order: 6
+---
+
+<h1 class="cmp-h1">{{ titles.services if titles.services else "Services" }}</h1>
+
+<div class="">
+    {% for service in collections.service %}
+    <section class="pt-12 first:pt-4">
+        <h2 class="cmp-h2">{{service.data.title}}</h2>
+        <div class="cmp-markdown">
+            {{ service.templateContent | safe }}
+        </div>
+        <a class="cmp-link-button" href="/contact">Contact</a>
+    </section>
+    {% endfor %}
+</div>
+

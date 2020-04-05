@@ -240,10 +240,10 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
-          label: "Publisher",
+          label: "Publisher / publication",
           name: "publisher",
           widget: "string",
-          required: false,
+          required: true,
         }
       - {
           label: "Description",
