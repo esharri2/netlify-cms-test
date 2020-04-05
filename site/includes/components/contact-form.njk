@@ -1,4 +1,7 @@
-<form class="font-body" name="contact" method="POST" data-netlify="true">
+<form class="font-body" name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" netlify-honeypot="bot-field">
+    <p class="hidden">
+        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+    </p>
     <p class="mt-2 py-2">
         <label>Your Name: <input class="cmp-input" type="text" name="name"/></label>
     </p>
@@ -10,7 +13,7 @@
         </label>
     </p>
     <div class="mt-2 py-2">
-        <div data-netlify-recaptha="true"></div>
+        <div data-netlify-recaptcha="true"></div>
     </div>
     <p>
         <button class="cmp-button w-full" type="submit">Send</button>
