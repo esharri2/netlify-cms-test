@@ -17,12 +17,9 @@ module.exports = {
   entry: "./js/main.js",
   output: {
     path: path.resolve(__dirname, "site/assets"),
-    filename: "bundle.js"
+    filename: "bundle.js",
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin()
-  ],
+  plugins: [new CleanWebpackPlugin(), new MiniCssExtractPlugin()],
   module: {
     rules: [
       {
@@ -36,11 +33,10 @@ module.exports = {
             loader: "css-loader",
           },
           {
-            loader: 'postcss-loader'
+            loader: "postcss-loader",
           }
-
-        ]
-      }
-    ]
-  }
+        ],
+      },
+    ],
+  },
 };

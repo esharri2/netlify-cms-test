@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "animations.css";
 
+/* purgecss start ignore */
 
 button, a, input, textarea {
   outline-color: theme('colors.accent1') !important;
@@ -99,6 +101,7 @@ svg {
   max-height: 100%;
 }
 
-@import "animations.css"
+/* purgecss end ignore */
+
 
 
