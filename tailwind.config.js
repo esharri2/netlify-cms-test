@@ -49,6 +49,6 @@ module.exports = {
     height: ["group-hover", "hover"],
     margin: ["first"],
     opacity: ["group-hover"],
-    padding: ["first", "responsive"]
+    padding: ["first", "last", "responsive"]
   },
 };

@@ -37,16 +37,20 @@ button, a, input, textarea {
 }
 
 .cmp-h1 {
-  @apply font-title text-4xl leading-none my-4;
+  @apply font-title text-4xl leading-none mt-4 mb-12;
 }
 
 .cmp-h2 {
-  @apply font-title text-3xl leading-none my-4;
+  @apply font-title text-2xl leading-none my-4;
 }
 
 @screen lg {
   .cmp-h1 {
     @apply text-6xl;
+  }
+
+  .cmp-h2 {
+    @apply text-4xl
   }
 }
 
@@ -59,11 +63,15 @@ button, a, input, textarea {
 }
 
 .cmp-link-button {
-  @apply text-light bg-dark px-6 py-4 inline-block;
+  @apply text-light flex bg-dark px-6 py-4 inline-block;
 }
 
 .cmp-markdown {
   @apply pt-4;
+}
+
+.cmp-h1 + .cmp-markdown {
+  @apply pt-0;
 }
 
 .cmp-markdown p {

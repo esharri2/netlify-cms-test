@@ -1,6 +1,6 @@
  {% for publication in collections.publication | reverse %}
     {% set data = publication.data %}
-    <div class="pt-8 first:pt-4">
+    <div class="pt-8 first:pt-0">
       <h2 class="font-title uppercase text-xl">{{data.title}}</h2>
       <p class="text-lg">
         <span class="italic">{{data.publisher}}</span> | {{data.date | prettyMonthAndYear}}
