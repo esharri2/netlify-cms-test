@@ -7,7 +7,7 @@ layout: container
         <p>{{date | prettyDate}}</p>
     {% endif %}
     {% if image %}
-        <img class="my-4 w-full" srcset="{% srcset image %}" src="{{image}}" alt=""/>
+        <img class="my-4 w-full" srcset="{% srcset image %}" src="{% src image %}" alt=""/>
     {% endif %}
     <div class="cmp-markdown">
         {{ content | safe}}

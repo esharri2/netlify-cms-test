@@ -10,7 +10,7 @@ layout: container
         <img 
             class="block max-w-md w-full mb-6 lg:pr-6" 
             srcset="{% srcset cover %}" 
-            src="{{cover}}" 
+            src="{% src cover %}" 
             alt="The book cover for {{title}}"/>
         <div>
         {% if synopsis%}

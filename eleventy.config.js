@@ -22,8 +22,8 @@ module.exports = config => {
 
   // Include our static assets
   config.addPassthroughCopy("site/admin");
-  config.addPassthroughCopy({"site/media/uploads" : "/media"});
-  config.addPassthroughCopy({ "site/media": "/media" });
+  config.addPassthroughCopy({"site/media/uploads" : "/media/source"});
+  config.addPassthroughCopy({ "site/media/art": "/media/source" });
   config.addPassthroughCopy({"site/media/icons": "/media/icons" });
   config.addPassthroughCopy({ "site/assets": "/" });
   config.setUseGitIgnore(false);
@@ -40,6 +40,11 @@ module.exports = config => {
       ${dir}/${name}-sm${ext} 480w
     `;
   });
+    config.addNunjucksShortcode("src", (img) => {
+      const { dir, name, ext } = path.parse(img);
+      // TODO this duplicates size names and sizes that are in imageConverter.js; could be simplified.
+      return `${dir}/${name}-md${ext}`;
+    });
 
 
   // Filters

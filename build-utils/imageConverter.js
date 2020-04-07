@@ -1,10 +1,12 @@
 const sharp = require("sharp");
 const path = require("path");
-var glob = require("glob");
+const glob = require("glob");
+const fs = require('fs');
+const del = require("del");
 
 // TODO make it so an image does not get stretched above native size
 
-const mediaDir = "./dist/media/*.*";
+const mediaDir = "./dist/media/source/*.*";
 const sizes = [
   // { tag: "xl", size: 1440 },
   { tag: "lg", size: 1080 },
@@ -33,6 +35,11 @@ const init = () => {
   imageNames.forEach(image => {
     createImages(image);
   });
+
+  (async () => {
+    const deletedPaths = await del(["dist/media/source/*"]);
+    console.log(`${deletePaths.length} images have been deleted.`)
+  })();
 };
 
 init();
