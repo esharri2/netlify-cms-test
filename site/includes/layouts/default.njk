@@ -4,41 +4,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{general.site_title}}</title>
-        <meta name="description" content="{{general.site_descript}}">
+        <meta name="description" content="{{general.site_description}}">
+        <meta name="theme-color" content="#F5F5F5">
+        {% include "components/meta-social.njk" %}
+        {% include "components/meta-icons.njk" %}
+
         {# {% if page.fileSlug === "blog" %}
             <meta name="robots" content="noindex,follow"/>
         {% endif %} #}
-
+        <link rel="stylesheet" href="/main.css">
+        <script src="/bundle.js" defer="defer"></script>
         <link href="https://fonts.googleapis.com/css?family=Spartan|Roboto&display=swap" rel="stylesheet">      
-        {# if your site's entire CSS comes in under 14kb, you may want to inline in the head #}
-        {# include main.css if in development mode #}
-        {% if helpers.environment == "development" %}
-            <link rel="stylesheet" href="/main.css">
-        {% else %}
-            {# else, use the minified css file for production #}
-            <link rel="stylesheet" href="/main.css">
-        {% endif %}
-
-        {# include scripts #}
-        {% if helpers.environment == "development" %}
-            <script src="/bundle.js" defer="defer"></script>
-        {% else %}
-            <script src="/bundle.js" defer="defer"></script>
-        {% endif %}
-
-        {# include social meta tags #}
-        {% include "components/social-meta.njk" %}
-
-        <link rel="apple-touch-icon" sizes="180x180" href="/media/site_icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/media/site_icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/media/site_icons/favicon-16x16.png">
-        <link rel="manifest" href="/manifest.json">
-
-        {# lastly include favicon, fonts, etc #}
-        <link rel="icon" type="image/png" href="{{ site.images.favicon }}">
-
-        {# canonical #}
-        <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+        <link rel="canonical" href="{{ general.site_domain }}{{ page.url }}">
     </head>
 
     <body class="text-dark h-full">
