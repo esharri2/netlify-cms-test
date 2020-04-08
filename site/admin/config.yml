@@ -144,7 +144,6 @@ collections: # A list of collections the CMS should be able to edit
               - { label: "Email", name: "email", widget: "string" }
               - { label: "Purpose", name: "purpose", widget: "string" }
               - { label: "Name of contact", name: "name", widget: "string", required: false }
-
       - name: "social"
         label: "Social media links"
         file: "site/data/socialMedia.json"
