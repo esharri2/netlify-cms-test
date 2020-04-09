@@ -21,8 +21,10 @@ const createImages = async image => {
   const ext = path.extname(image);
 
   sizes.forEach(size => {
+
+    // if native size of image is above 
     sharp(image)
-      .resize(size.size)
+      .resize(size.size, {withoutEnlargement: true})
       .toFile(`./dist/media/${name}-${size.tag}${ext}`)
       .then(() => {
         return true;
