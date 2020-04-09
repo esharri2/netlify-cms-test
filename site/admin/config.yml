@@ -219,12 +219,13 @@ collections: # A list of collections the CMS should be able to edit
           format: "YYYY-MM-DD",
           required: true,
         }
-      - {
-          label: "Purchase link",
-          name: "purchase_link",
-          widget: "string",
-          required: false,
-        }
+      - label: "Purchase links"
+        name: "purchase_links"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Source", name: "source", hint: ".e.g, Powell's'" widget: "string", required: true}
+          - { label: "Link", name: "Link", widget: "string", required: true}
       - label: "Blurbs"
         name: "blurbs"
         widget: "list"
@@ -232,6 +233,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - { label: "Text", name: "text", widget: "text" }
           - { label: "Attribution", name: "attribution", widget: "string" }
+      - label: "Reviews"           
+        name: "reviews"
+        widget: "list"
+        fields:
+          - { label: "Publication / source", name: "publication", widget: "string", required: true }
+          - { label: "Link", name: "purpose", widget: "string", required: true }
   - name: "publications"
     label: "Other publications"
     label_singular: "publication"
