@@ -1,24 +1,9 @@
-const location = window.location.href;
-const pathname = new URL(location).pathname;
+const pathname = new URL(window.location.href).pathname;
 
-const loadNetlifyIdentity = () => {
-  const newScript = document.createElement("script");
-  newScript.src = "https://identity.netlify.com/v1/netlify-identity-widget.js";
-  document.body.appendChild(newScript);
-};
-
+// TODO tighten this condition
 if (pathname.includes("/admin")) {
-  loadNetlifyIdentity();
+  (async () => {
+      await import("loadNetlifyIdentity.js");
+      import("editorComponents");
+  })();
 }
-
-
-
-// (async () => {
-//   if (somethingIsTrue) {
-//     // import module for side effects
-//     await import("/modules/my-module.js");
-//   }
-// })();
-
-{/* <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>; */}
-// 
