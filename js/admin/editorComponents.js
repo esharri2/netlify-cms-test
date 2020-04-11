@@ -1,3 +1,4 @@
+console.log("Registering components");
 CMS.registerEditorComponent({
   // Internal id of the component
   id: "youtube",
