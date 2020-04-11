@@ -1,6 +1,7 @@
-<footer class="bg-dark text-light font-body p-4 flex flex-col md:items-center">
-    <div>Copyright © {% currentYear whatever %} | {{general.site_title}} </div>
-    <div><a href="/contact">Contact</a></div>
-    {% include "./social-links.njk" %}
+<footer class="bg-dark text-light font-body px-4 py-8 flex flex-col items-center">
+<div>Copyright © {% currentYear whatever %} | {{general.site_title}} | <a class="mr-4 cmp-link" href="/contact">Contact</a> </div>
+    <div class="pt-4 ">
+        {% include "./social-links.njk" %}
+    </div>
     <div class="pt-4"><a href="https://www.evan-harrison.com" class="cmp-link">Web by <span class="underline">Evan</span></a></div>
 </footer>

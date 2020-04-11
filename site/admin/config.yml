@@ -224,7 +224,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: "list"
         required: false
         fields:
-          - { label: "Source", name: "source", hint: ".e.g, Powell's'", widget: "string", required: true}
+          - { label: "Source", name: "source", hint: ".e.g, Powell's Books", widget: "string", required: true}
           - { label: "Link", name: "Link", widget: "string", required: true}
       - label: "Blurbs"
         name: "blurbs"
