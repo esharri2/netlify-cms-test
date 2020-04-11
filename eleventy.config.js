@@ -2,6 +2,8 @@ const markdown = require("markdown-it")({
   html: true
 });
 const path = require("path");
+const htmlmin = require("html-minifier");
+
 
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const svgContentsPlugin = require("eleventy-plugin-svg-contents");
@@ -18,7 +20,6 @@ module.exports = config => {
   config.addLayoutAlias("default", "layouts/default.njk");
   config.addLayoutAlias("about", "layouts/about.njk");
   config.addLayoutAlias("container", "layouts/container.njk");
-
 
   // Include our static assets
   config.addPassthroughCopy("site/admin");
@@ -70,6 +71,20 @@ module.exports = config => {
       month: "long",
     });
   });
+
+  // Transforms
+    config.addTransform("htmlmin", function (content, outputPath) {
+      if (outputPath.endsWith(".html")) {
+        let minified = htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true,
+        });
+        return minified;
+      }
+
+      return content;
+    });
 
   return {
     templateFormats: ["md", "njk", "json"],
