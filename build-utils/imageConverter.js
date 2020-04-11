@@ -38,7 +38,7 @@ const init = () => {
   });
 
   (async () => {
-    await del(["dist/media/source/*"]);
+    const deletePaths = await del(["dist/media/source/*"]);
     console.log(`${deletePaths.length} images have been deleted.`);
   })();
 };
