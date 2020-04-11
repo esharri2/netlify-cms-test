@@ -21,5 +21,18 @@ synopsis: >-
   billions upon billions upon billions.
 cover: /media/cover-hillman.jpg
 date: 2021-03-21T00:00:00.000Z
+purchase_links:
+  - source: Powell's Bookstore
+    link: https://www.powells.com
+  - source: Amanone Books
+    link: https://www.google.com
 purchase_link: 'https://www.paypal.com'
+blurbs:
+  - text: >-
+      Upon billions upon billions upon
+      billions upon billions upon billions.
+    attribution: Tina Wells
+reviews:
+  - publication: New York Times
+    purpose: https://www.newyorktimes.com
 ---

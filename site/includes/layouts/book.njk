@@ -16,10 +16,12 @@ layout: container
         {% if synopsis%}
             <p class="my-4 first:mt-0">{{synopsis}}</p>
         {% endif %}
-        <p class="inline-block">{{date | prettyMonthAndYear}}</p>
-        {% if publisher%}
-            <p class="first:mt-0 inline-block">, {{publisher}}</p>
-        {% endif %}
+        <div>
+            <p class="inline-block">{{date | prettyMonthAndYear}}</p>
+            {% if publisher%}
+                <p class="first:mt-0 inline-block">, {{publisher}}</p>
+            {% endif %}
+        </div>
         {% for blurb in blurbs %}
             <div class="my-4">
                 <p class="italic mb-2">"{{blurb.text}}"</p>

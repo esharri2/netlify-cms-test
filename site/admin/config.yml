@@ -119,6 +119,7 @@ collections: # A list of collections the CMS should be able to edit
                 "bulleted-list",
                 "numbered-list",
               ]
+            editorComponents: []
   - name: "contact"
     label: "Contact information"
     description: "Contact information and social media links."
@@ -190,6 +191,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: "markdown"
         buttons:
           ["bold", "italic", "link", "quote", "bulleted-list", "numbered-list"]
+        editorComponents: []
   - name: "books"
     label: "Books"
     label_singular: "book"
@@ -225,7 +227,7 @@ collections: # A list of collections the CMS should be able to edit
         required: false
         fields:
           - { label: "Source", name: "source", hint: ".e.g, Powell's Books", widget: "string", required: true}
-          - { label: "Link", name: "Link", widget: "string", required: true}
+          - { label: "Link", name: "link", widget: "string", required: true}
       - label: "Blurbs"
         name: "blurbs"
         widget: "list"
@@ -311,3 +313,4 @@ collections: # A list of collections the CMS should be able to edit
         widget: "markdown"
         buttons:
           ["bold", "italic", "link", "quote", "bulleted-list", "numbered-list"]
+        editorComponents: []

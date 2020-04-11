@@ -11,7 +11,11 @@ synopsis: >-
   extraordinary evidence
 cover: /media/cover-poolside.jpg
 date: 2020-01-21T00:00:00.000Z
-purchase_link: 'https://www.powells.com'
+purchase_links:
+  - source: Powell's Bookstore
+    link: https://www.powells.com
+  - source: Amanone Books
+    link: https://www.google.com
 blurbs:
   - text: >-
       The ash of stellar alchemy not a sunrise but a galaxy rise vanquish the
@@ -23,4 +27,9 @@ blurbs:
       epochs of brilliant syntheses and billions upon billions upon billions
       upon billions upon billions upon billions upon billions.
     attribution: Duff Killian
+reviews:
+  - publication: Boston Review
+    purpose: https://www.bostonreview.com
+  - publication: New York Times
+    purpose: https://www.newyorktimes.com
 ---

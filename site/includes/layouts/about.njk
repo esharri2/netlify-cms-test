@@ -4,8 +4,6 @@ eleventyNavigation:
   key: About
   order: 1
 ---
-
-{{data | log}}
 <h1 class="cmp-h1">{{ titles.about if titles.about else "About" }}</h1>
 <div class="cmp-markdown">
   {% if author_image.file%}

@@ -21,7 +21,11 @@ synopsis: >-
   extraordinary evidence
 cover: /media/cover-tower.jpg
 date: 2012-03-19T00:00:00.000Z
-purchase_link: 'https://www.powells.com'
+purchase_links:
+  - source: Powell's Bookstore
+    link: https://www.powells.com
+  - source: Amanone Books
+    link: https://www.google.com
 blurbs:
   - text: >-
       The ash of stellar alchemy not a sunrise but a galaxy rise vanquish the

@@ -3,12 +3,10 @@
     if (navigator.clipboard) {
       navigator.clipboard.writeText(inputElement.value).then(
         function() {
-          console.log("yay");
           copyIcon.classList.add("hidden");
           successIcon.classList.replace("hidden", "inline");
         },
         function() {
-          console.log("fail");
           alert("Sorry. That didn't work.");
         }
       );
