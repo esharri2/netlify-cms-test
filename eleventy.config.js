@@ -25,7 +25,7 @@ module.exports = config => {
   config.addPassthroughCopy("site/admin");
   config.addPassthroughCopy({"site/media/uploads" : "/media/source"});
   config.addPassthroughCopy({ "site/media/art": "/media/source" });
-  config.addPassthroughCopy({"site/media/icons": "/media/icons" });
+  config.addPassthroughCopy({"site/media/site_icons": "/" });
   config.addPassthroughCopy({ "site/assets": "/" });
   config.setUseGitIgnore(false);
 
