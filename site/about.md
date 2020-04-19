@@ -1,5 +1,4 @@
 ---
-title: About
 layout: about
 author_image:
   byline: Photo by Wallace Chuck from Pexels

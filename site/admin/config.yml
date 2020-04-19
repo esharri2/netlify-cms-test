@@ -105,7 +105,6 @@ collections: # A list of collections the CMS should be able to edit
                   widget: "string",
                   required: false,
                 }
-          - { label: Title, name: title, widget: string }
           - label: "Bio"
             name: "body"
             widget: "markdown"
