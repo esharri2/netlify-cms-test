@@ -12,5 +12,5 @@ const pathname = new URL(window.location.href).pathname;
 
 
   (async () => {
-    await import("./loadNetlifyIdentity.js");
+    await import("/loadNetlifyIdentity.js");
   })();

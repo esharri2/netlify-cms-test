@@ -5,6 +5,8 @@
     document.documentElement.scrollTop = 0;
   });
 
+  // TODO intersection observer?
+
   document.addEventListener("scroll", () => {
     if (document.documentElement.scrollTop > 1600) {
       if (button.classList.contains("hidden")) {
