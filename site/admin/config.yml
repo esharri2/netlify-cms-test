@@ -14,7 +14,11 @@ collections: # A list of collections the CMS should be able to edit
   - name: "general"
     label: "General & miscellaneous"
     description:
-      "Basic information about your site, such as title and description."
+      "Basic information about your site, such as title and description.
+      
+      Test
+      
+      "
     files:
       - name: "general"
         label: "General site information"
@@ -46,38 +50,51 @@ collections: # A list of collections the CMS should be able to edit
           - {
               name: "about",
               label: "About page title",
-              widget: "string",
-              required: false,
+              widget: "string", 
+              default: "About",             
+              required: true,
             }
           - {
               name: "books",
               label: "Books page title",
               widget: "string",
-              required: false,
+              default: "Books",
+              required: true,
             }
           - {
               name: "services",
               label: "Services page title",
               widget: "string",
-              required: false,
+              default: "Services",
+              required: true,
             }
           - {
               name: "events",
               label: "Events page title",
-              widget: "string",
-              required: false,
+              widget: "string",              
+              default: "Events",
+              required: true,
             }
           - {
               name: "publications",
               label: "Publications page title",
               widget: "string",
-              required: false,
+              default: "Publications",              
+              required: true,
             }
           - {
               name: "contact",
               label: "Contact page title",
               widget: "string",
-              required: false,
+              default: "Contact",
+              required: true,
+            }
+          - {
+              name: "posts",
+              label: "News/blog page title",
+              widget: "string",
+              default: "News",
+              required: true,
             }
   - name: "bio"
     label: "Bio"
