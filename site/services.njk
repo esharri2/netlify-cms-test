@@ -1,8 +1,9 @@
 ---
 layout: container
-eleventyNavigation:
-  key: Services
-  order: 6
+eleventyComputed:
+  eleventyNavigation:
+    key: "{{titles.services}}"
+    order: 6
 ---
 
 <h1 class="cmp-h1">{{ titles.services if titles.services else "Services" }}</h1>

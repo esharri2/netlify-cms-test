@@ -1,8 +1,9 @@
 ---
 layout: container
-eleventyNavigation:
-  key: Contact
-  order: 10
+eleventyComputed:
+  eleventyNavigation:
+    key: "{{titles.contact}}"
+    order: 10
 ---
 <h1 class="cmp-h1 text-center">{{ titles.contact if titles.contact else "Contact" }}</h1>
 

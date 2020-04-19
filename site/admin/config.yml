@@ -13,10 +13,10 @@ publish_mode: editorial_workflow
 collections: # A list of collections the CMS should be able to edit
   - name: "general"
     label: "General & miscellaneous"
-    description:
-      "Basic information about your site, such as title and description.
+    description: >
+      "The 'General site informaton' section has basic information about your site, such as title and description.
       
-      Test
+      The 'Page and navigation titles' allows you set the page title and navigation name for each page. These all have default values to start.
       
       "
     files:
@@ -42,10 +42,15 @@ collections: # A list of collections the CMS should be able to edit
               widget: "string",
               required: false,
             }
+          - {
+              label: "Site description",
+              name: "site_description",
+              widget: "string",
+              required: false,
+            }
       - name: "titles"
-        label: "Page titles"
+        label: "Page and navigation titles"
         file: "site/data/titles.json"
-        description: "A description about the title section"
         fields:
           - {
               name: "about",
@@ -158,8 +163,8 @@ collections: # A list of collections the CMS should be able to edit
             name: "other_emails"
             widget: "list"
             fields:
-              - { label: "Email", name: "email", widget: "string" }
-              - { label: "Purpose", name: "purpose", widget: "string" }
+              - { label: "Email", name: "email", widget: "string", hint: "Add an email for additional contact that will display along with your contact form." }
+              - { label: "Purpose", name: "purpose", widget: "string", hint: "Add the purpose of this contact, e.g. 'Readings and public appearances'" }
               - { label: "Name of contact", name: "name", widget: "string", required: false }
       - name: "social"
         label: "Social media links"
@@ -193,6 +198,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: "Title"
         name: "title"
         widget: "string"
+        required: true
       - label: "Publish date"
         name: "date"
         widget: "datetime"
@@ -205,6 +211,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: "Body"
         name: "body"
         widget: "markdown"
+        required: true
         buttons:
           ["bold", "italic", "link", "quote", "bulleted-list", "numbered-list"]
         editorComponents: ["youtube"]
@@ -254,6 +261,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: "Reviews"           
         name: "reviews"
         widget: "list"
+        required: false
         fields:
           - { label: "Publication / source", name: "publication", widget: "string", required: true }
           - { label: "Link", name: "purpose", widget: "string", required: true }
@@ -264,7 +272,7 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/publications"
     create: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Title", name: "title", widget: "string", required: true }
       - {
           label: "Publisher / publication",
           name: "publisher",
@@ -324,9 +332,11 @@ collections: # A list of collections the CMS should be able to edit
       - label: "Name"
         name: "title"
         widget: "string"
+        required: true
       - label: "Body"
         name: "body"
         widget: "markdown"
+        required: true
         buttons:
           ["bold", "italic", "link", "quote", "bulleted-list", "numbered-list"]
         editorComponents: []

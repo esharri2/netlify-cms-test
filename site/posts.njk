@@ -1,8 +1,9 @@
 ---
 layout: container
-eleventyNavigation:
-  key: News
-  order: 3
+eleventyComputed:
+  eleventyNavigation:
+    key: "{{titles.posts}}"
+    order: 5
 pagination:
   data: collections.post
   size: 5

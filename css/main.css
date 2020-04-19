@@ -84,7 +84,13 @@ button, a, input, textarea {
 }
 
 .cmp-markdown img {
-  @apply max-w-md	mx-auto;
+  @apply max-w-full	mx-auto;
+}
+
+@screen lg {
+  .cmp-markdown img {
+    @apply max-w-md
+  }
 }
 
 .cmp-markdown p {

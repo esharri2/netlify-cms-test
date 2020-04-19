@@ -1,8 +1,9 @@
 ---
 layout: container
-eleventyNavigation:
-  key: Events
-  order: 4
+eleventyComputed:
+  eleventyNavigation:
+    key: "{{titles.events}}"
+    order: 4
 pagination:
   data: collections.event
   size: 100
