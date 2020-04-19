@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{general.site_title}}</title>
+        {# <title>{{general.site_title}}</title> #}
+        {# TODO pipe is conditional #}
+        <title>{{title}} | {{general.site_title}}</title>
         <meta name="description" content="{{general.site_description}}">
         <meta name="theme-color" content="#F5F5F5">
         {% include "components/meta-social.njk" %}
