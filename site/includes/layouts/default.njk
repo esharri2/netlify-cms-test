@@ -12,13 +12,14 @@
         {# {% if page.fileSlug === "blog" %}
             <meta name="robots" content="noindex,follow"/>
         {% endif %} #}
+        
         <link rel="stylesheet" href="/main.css">
         <script src="/bundle.js" defer="defer"></script>
         <link href="https://fonts.googleapis.com/css?family=Spartan|Roboto&display=swap" rel="stylesheet">      
         <link rel="canonical" href="{{ general.site_domain }}{{ page.url }}">
     </head>
 
-    <body class="text-dark h-full">
+    <body class="text-dark h-full overflow-x-hidden">
         {% if page.fileSlug !== '' %}
             {% include "components/skip-to-content.njk" %} 
             {% include "components/header.njk" %} 

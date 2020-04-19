@@ -8,7 +8,6 @@ const del = require("del");
 
 const mediaDir = "./dist/media/source/*.*";
 const sizes = [
-  // { tag: "xl", size: 1440 },
   { tag: "lg", size: 1080 },
   { tag: "md", size: 720 },
   { tag: "sm", size: 480 },

@@ -23,10 +23,19 @@ button, a, input, textarea {
 
 .cmp-cover-image img {
   filter: grayscale(100);
-  object-fit: cover;
   z-index: -1;
-  height: 100%;
-  width: 100%;
+  @apply w-full h-full object-cover;
+}
+
+.cmp-full-bleed {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  @apply w-screen overflow-hidden;
+}
+
+.cmp-full-bleed-wrapper {
+   @apply mx-auto max-w-screen-md px-6
+
 }
 
 .cmp-h1 {
@@ -34,7 +43,7 @@ button, a, input, textarea {
 }
 
 .cmp-h2 {
-  @apply font-title text-2xl leading-none my-4;
+  @apply font-title text-2xl my-4;
 }
 
 @screen lg {

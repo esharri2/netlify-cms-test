@@ -4,7 +4,6 @@ css-loader: "The css-loader interprets @import and url() like import/require() a
 
 PLUGINS
 mini-css-extract-plugin: Extracts CSS to separate files
-
 */
 
 
