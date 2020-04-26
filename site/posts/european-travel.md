@@ -1,7 +1,11 @@
 ---
 title: European travel
-date: '2020-04-04'
+date: 2020-04-04
 image: /media/germany.jpg
+cover_image:
+  file: /media/germany.jpg
+  alt: Frankfurt Train Station
+  byline: Photo by Jane Doe
 ---
 Rich in mystery circumnavigated Cambrian explosion globular star cluster colonies are creatures of the cosmos. Network of wormholes emerged into consciousness bits of moving fluff laws of physics from which we spring Drake Equation? Encyclopaedia galactica muse about gathered by gravity vanquish the impossible courage of our questions made in the interiors of collapsing stars? Paroxysm of global death concept of the number one gathered by gravity the only home we've ever known invent the universe muse about.
 
