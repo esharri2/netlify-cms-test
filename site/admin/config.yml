@@ -137,9 +137,9 @@ collections: # A list of collections the CMS should be able to edit
               hint:
                 "Some text to show before the book featured on your home page, such as 'Coming soon' or 'Available now'",
             }
-      - name: "books"
+      - name: "bookspage"
         label: "Books page settings"
-        file: "site/data/featured.json"
+        file: "site/data/bookspage.json"
         fields:
           - {
               label: "Show other publications on the books page.",
