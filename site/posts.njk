@@ -13,10 +13,12 @@ pagination:
 <h1 class="cmp-h1">{{ titles.posts if titles.posts else "News" }}</h1>
   <div>
   {% for post in posts | reverse %}
+    {% set post = post.data %}
+
     <article class="mt-20 first:mt-8">
-      <h2 class="cmp-h2">{{ post.data.title }}</h2>
-      {% if post.data.date %}
-        <p>{{post.data.date | prettyDate}}</p>
+      <h2 class="cmp-h2">{{ post.title }}</h2>
+      {% if post.date %}
+        <p>{{post.date | prettyDate}}</p>
       {% endif %}
       <div class="js-click-copy mt-4">
         <button class="flex items-center text-sm">
@@ -26,8 +28,13 @@ pagination:
         </button>
       <input type="text" value="https://{{general.site_domain}}/posts/{{post.fileSlug}}" class="hidden"/>
       </div>
-      {% if post.data.image %}
-        <img class="my-4 mx-auto max-h-lg" loading="lazy" srcset="{% srcset post.data.image %}" src="{% src post.data.image %}" alt=""/>
+      {% if post.image %}
+        <img 
+          class="my-4 mx-auto max-h-lg" 
+          loading="lazy" 
+          srcset="{% srcset post.cover_image.file %}" 
+          src="{% src post.cover_image.file %}" 
+          alt="{{post.cover_image.alt}}"/>
       {% endif %}
       <div class="cmp-markdown">
         {{ post.templateContent | safe}}

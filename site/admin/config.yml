@@ -261,9 +261,29 @@ collections: # A list of collections the CMS should be able to edit
         dateFormat: "YYYY-MM-DD"
         format: "YYYY-MM-DD"
       - label: "Cover image"
-        name: "image"
-        widget: "image"
+        name: "cover_image"
+        widget: "object"
         required: false
+        fields:
+          - {
+              label: "Image",
+              name: "file",
+              widget: "image",
+              required: true,
+            }
+          - {
+              label: "Byline",
+              name: "byline",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Alt text",
+              name: "alt",
+              widget: "string",
+              required: false,
+              hint: "This is how your image will be described to someone using a screen reader. You can leave this blank if the image is purely decorative."
+            }
       - label: "Body"
         name: "body"
         widget: "markdown"
