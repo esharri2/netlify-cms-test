@@ -3,12 +3,7 @@ const markdown = require("markdown-it")({
 });
 const path = require("path");
 const htmlmin = require("html-minifier");
-
-
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const svgContentsPlugin = require("eleventy-plugin-svg-contents");
-
-
 
 module.exports = config => {
 
