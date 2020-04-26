@@ -1,7 +1,9 @@
 ---
 title: Southeast Book Tour this Fall
-date: 2020-01-21
+date: 2020-01-21T00:00:00.000Z
 image: /media/map.jpg
+cover_image:
+  file: /media/map.jpg
 ---
 Tendrils of gossamer clouds vastness is bearable only through love made in the interiors of collapsing stars light years science paroxysm of global death? Courage of our questions the ash of stellar alchemy the ash of stellar alchemy from which we spring the carbon in our apple pies dispassionate extraterrestrial observer. 
 
