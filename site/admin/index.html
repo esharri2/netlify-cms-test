@@ -57,9 +57,7 @@ CMS.registerEditorComponent({
   toBlock: (obj) => `![${obj.alt}](${obj.file})`;
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
-  toPreview: function(obj) {
-    return (obj);
-  }
+  toPreview: obj => `<img src="${obj.file}"/>`
 });
 </script>
 
