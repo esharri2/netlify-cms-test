@@ -13,6 +13,7 @@ pagination:
 <h1 class="cmp-h1">{{ titles.posts if titles.posts else "News" }}</h1>
   <div>
   {% for post in posts | reverse %}
+    {% set markdown = post.templateContent %}
     {% set post = post.data %}
 
     <article class="mt-20 first:mt-8">
@@ -29,15 +30,15 @@ pagination:
       <input type="text" value="https://{{general.site_domain}}/posts/{{post.fileSlug}}" class="hidden"/>
       </div>
       {% if post.image %}
-        {# <img 
+        <img 
           class="my-4 mx-auto max-h-lg" 
           loading="lazy" 
           srcset="{% srcset post.cover_image.file %}" 
           src="{% src post.cover_image.file %}" 
-          alt="{{post.cover_image.alt}}"/> #}
+          alt="{{post.cover_image.alt}}"/>
       {% endif %}
       <div class="cmp-markdown">
-        {{ post.templateContent | safe}}
+        {{ markdown | safe}}
       </div>
       {# TODO macro? includes? social share? #}
     </article>
