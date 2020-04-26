@@ -14,7 +14,6 @@ module.exports = config => {
 
   // Plugins
   config.addPlugin(eleventyNavigationPlugin);
-  config.addPlugin(svgContentsPlugin);  
 
   // Layout alias
   config.addLayoutAlias("default", "layouts/default.njk");

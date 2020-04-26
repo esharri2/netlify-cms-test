@@ -45,7 +45,6 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "eleventy-plugin-svg-contents": "^0.5.1",
     "glob": "^7.1.6",
     "html-minifier": "^4.0.0",
     "rimraf": "^3.0.2",

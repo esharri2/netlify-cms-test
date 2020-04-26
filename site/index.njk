@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+    {% set hasFeaturedBook = "fart" %}
 
 <div class="kf-fade-in h-screen flex flex-col justify-center items-center z-10">
   <div class="mb-4">
@@ -16,6 +16,34 @@ layout: default
   <img class="cmp-cover-image kf-slight-fade-in" srcset="{% srcset 'media/plant-close.jpg' %}"/>
 </div>
 
+{% for book in collections.book | reverse %}
+  {% if book.data.featured %}
+    {% set hasFeaturedBook = "fart" %}
+    {% set book = book.data %}
+    <div class="max-w-screen-md mx-auto mb-24">
+      <h1 class="cmp-h1 text-center">{{book.title}}</h1>
+        <div class="flex flex-col md:flex-row">
+          <img 
+            class="block mx-auto w-full max-w-sm" 
+            srcset="{% srcset book.cover %}" 
+            src="{% src book.cover %}" 
+            alt="The book cover for {{book.title}}"/>
+          <div>
+            <a class="cmp-link-button mt-4 mb-2 w-full fill-current" href="/books/{{book.title | slug}}">Read more <span class="float-right inline-block align-middle w-6 h-6">{% include "./media/icons/chevron-right.svg" %}</span></a>
+            {% for purchase_link in book.purchase_links%}
+                <a class="cmp-link-button my-2 w-full fill-current" href="{{purchase_link.link}}">Buy at {{purchase_link.source}} <span class="float-right inline-block align-middle w-6 h-6">{% include "./media/icons/chevron-right.svg" %}</span></a>
+            {% endfor %}
+            {% for blurb in book.blurbs %}
+                <div class="my-4">
+                    <p class="italic mb-2">"{{blurb.text}}"</p>
+                    <p>{{blurb.attribution}}
+                </div>
+            {% endfor %}
+          </div>
+        </div>
+    </div>
+  {% endif %}
+{% endfor %}
 
 <script>
   if (window.netlifyIdentity) {

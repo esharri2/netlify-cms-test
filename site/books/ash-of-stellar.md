@@ -1,5 +1,6 @@
 ---
 title: Ash of Stellar
+featured: true
 publisher: Scripper & Toasty
 genre: Novel
 synopsis: >-

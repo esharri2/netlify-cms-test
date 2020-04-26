@@ -12,7 +12,7 @@
         <p class="pt-4">{{data.description}}</p>
       {% endif %}
       {% if data.link %}
-        <a class="cmp-link mt-4 flex items-center fill-current" href="{{data.link}}">Read <span class="w-6 h-6">{{ "/site/media/icons/chevron-right.svg"| svgContents | safe }}</span></a>
+        <a class="cmp-link mt-4 flex items-center fill-current" href="{{data.link}}">Read <span class="w-6 h-6">{% include "../../media/icons/chevron-right.svg" %}</span></a>
       {% endif %}
     </div>
   {% endfor %}

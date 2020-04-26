@@ -12,12 +12,14 @@ publish_mode: editorial_workflow
 # COLLECTIONS
 collections: # A list of collections the CMS should be able to edit
   - name: "general"
-    label: "General & miscellaneous"
+    label: "General settings"
     description: >
-      "The 'General site informaton' section has basic information about your site, such as title and description.
-      
-      The 'Page and navigation titles' allows you set the page title and navigation name for each page. These all have default values to start.
-      
+      "The 'General site informaton' section has basic information about your
+      site, such as title and description.
+
+      The 'Page and navigation titles' allows you set the page title and
+      navigation name for each page. These all have default values to start.
+
       "
     files:
       - name: "general"
@@ -47,6 +49,7 @@ collections: # A list of collections the CMS should be able to edit
               name: "site_description",
               widget: "string",
               required: false,
+              hint: "This is a metadata description that will show under your site title in Google search results.",
             }
       - name: "titles"
         label: "Page and navigation titles"
@@ -55,8 +58,8 @@ collections: # A list of collections the CMS should be able to edit
           - {
               name: "about",
               label: "About page title",
-              widget: "string", 
-              default: "About",             
+              widget: "string",
+              default: "About",
               required: true,
             }
           - {
@@ -76,7 +79,7 @@ collections: # A list of collections the CMS should be able to edit
           - {
               name: "events",
               label: "Events page title",
-              widget: "string",              
+              widget: "string",
               default: "Events",
               required: true,
             }
@@ -84,7 +87,7 @@ collections: # A list of collections the CMS should be able to edit
               name: "publications",
               label: "Publications page title",
               widget: "string",
-              default: "Publications",              
+              default: "Publications",
               required: true,
             }
           - {
@@ -100,6 +103,31 @@ collections: # A list of collections the CMS should be able to edit
               widget: "string",
               default: "News",
               required: true,
+            }
+      - name: "featured"
+        label: "Featured book information"
+        file: "site/data/featured.json"
+        fields:
+          - {
+              name: "featured_title",
+              label: "Featured book",
+              widget: "relation",
+              collection: "books",
+              searchFields: ["title"],
+              valueField: "title",
+              multiple: false
+            }
+          - {
+              label: "Show featured book on home page",
+              name: "show_featured",
+              widget: "boolean",
+              required: true,
+              default: false,
+              hint:
+                "You can set one of your books 'featured' to have it display
+                prominently on the site (the location depends on how your site has
+                been designed.) You don't have to mark any of your books as
+                'featured'.",
             }
   - name: "bio"
     label: "Bio"
@@ -163,9 +191,28 @@ collections: # A list of collections the CMS should be able to edit
             name: "other_emails"
             widget: "list"
             fields:
-              - { label: "Email", name: "email", widget: "string", hint: "Add an email for additional contact that will display along with your contact form." }
-              - { label: "Purpose", name: "purpose", widget: "string", hint: "Add the purpose of this contact, e.g. 'Readings and public appearances'" }
-              - { label: "Name of contact", name: "name", widget: "string", required: false }
+              - {
+                  label: "Email",
+                  name: "email",
+                  widget: "string",
+                  hint:
+                    "Add an email for additional contact that will display along
+                    with your contact form.",
+                }
+              - {
+                  label: "Purpose",
+                  name: "purpose",
+                  widget: "string",
+                  hint:
+                    "Add the purpose of this contact, e.g. 'Readings and public
+                    appearances'",
+                }
+              - {
+                  label: "Name of contact",
+                  name: "name",
+                  widget: "string",
+                  required: false,
+                }
       - name: "social"
         label: "Social media links"
         file: "site/data/socialMedia.json"
@@ -194,7 +241,7 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/posts"
     create: true
     description: "Updates and announcements."
-    fields: # The fields each document in this collection have
+    fields: 
       - label: "Title"
         name: "title"
         widget: "string"
@@ -249,8 +296,14 @@ collections: # A list of collections the CMS should be able to edit
         widget: "list"
         required: false
         fields:
-          - { label: "Source", name: "source", hint: ".e.g, Powell's Books", widget: "string", required: true}
-          - { label: "Link", name: "link", widget: "string", required: true}
+          - {
+              label: "Source",
+              name: "source",
+              hint: ".e.g, Powell's Books",
+              widget: "string",
+              required: true,
+            }
+          - { label: "Link", name: "link", widget: "string", required: true }
       - label: "Blurbs"
         name: "blurbs"
         widget: "list"
@@ -258,12 +311,17 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - { label: "Text", name: "text", widget: "text" }
           - { label: "Attribution", name: "attribution", widget: "string" }
-      - label: "Reviews"           
+      - label: "Reviews"
         name: "reviews"
         widget: "list"
         required: false
         fields:
-          - { label: "Publication / source", name: "publication", widget: "string", required: true }
+          - {
+              label: "Publication / source",
+              name: "publication",
+              widget: "string",
+              required: true,
+            }
           - { label: "Link", name: "purpose", widget: "string", required: true }
   - name: "publications"
     label: "Other publications"
