@@ -26,7 +26,7 @@
         {% endif %}        
         <main id="main" class="mx-auto px-6 min-h-full max-w-screen-lg">{{ content | safe }}</main>
         {% include "components/back-to-top.njk" %} 
-        {% if page.fileSlug !== '' %}
+        {% if page.fileSlug !== '' or featured.show  %}
             {% include "components/footer.njk" %} 
         {% endif %}
     </body>

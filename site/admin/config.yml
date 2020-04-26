@@ -109,7 +109,7 @@ collections: # A list of collections the CMS should be able to edit
         file: "site/data/featured.json"
         fields:
           - {
-              name: "featured_title",
+              name: "title",
               label: "Featured book",
               widget: "relation",
               collection: "books",
@@ -119,7 +119,7 @@ collections: # A list of collections the CMS should be able to edit
             }
           - {
               label: "Show featured book on home page",
-              name: "show_featured",
+              name: "show",
               widget: "boolean",
               required: true,
               default: false,
@@ -131,7 +131,7 @@ collections: # A list of collections the CMS should be able to edit
             }
           - {
               label: "Lead-in text for featured book on home page",
-              name: "featured_subtitle",
+              name: "subtitle",
               widget: "string",
               required: false,
               default: "Available now",
