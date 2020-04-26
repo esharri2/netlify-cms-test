@@ -14,6 +14,7 @@ pagination:
   <div>
   {% for post in posts | reverse %}
     {% set markdown = post.templateContent %}
+    {% set slug = post.fileSlug %}
     {% set post = post.data %}
 
     <article class="mt-20 first:mt-8">
