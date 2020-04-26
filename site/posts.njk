@@ -28,7 +28,7 @@ pagination:
           <div class="js-success-icon w-8 h-8 mr-2 hidden">{% include "./media/icons/checkmark.svg" %}</div> 
           Copy a link to this post
         </button>
-      <input type="text" value="https://{{general.site_domain}}/posts/{{post.fileSlug}}" class="hidden"/>
+      <input type="text" value="https://{{general.site_domain}}/posts/{{post.slug}}" class="hidden"/>
       </div>
       {% if post.image %}
         <img 
