@@ -1,14 +1,55 @@
-const markdown = require("markdown-it")({
-  html: true
-});
+
 const path = require("path");
 const htmlmin = require("html-minifier");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const markdownIt = require("markdown-it");
+const markdownItResponsive = require("markdown-it-responsive");
+
+const options = {
+  html: true,
+  // breaks: true,
+  // linkify: true,
+};
+
+const rwdOptions = {
+  responsive: {
+    srcset: {
+      "*": [
+        {
+          width: 480,
+          rename: {
+            suffix: "-sm",
+          },
+        },
+        {
+          width: 720,
+          rename: {
+            suffix: "-md",
+          },
+        },
+        {
+          width: 1080,
+          rename: {
+            suffix: "-lg",
+          },
+        },
+      ],
+    },
+    sizes: {
+      "*": "(max-width: 550px) calc(100vw - 120px), 550px",
+    },
+  },
+};
+
 
 module.exports = config => {
 
   // Plugins
   config.addPlugin(eleventyNavigationPlugin);
+  config.setLibrary(
+    "md",
+    markdownIt(options).use(markdownItResponsive, rwdOptions)
+  );
 
   // Layout alias
   config.addLayoutAlias("default", "layouts/default.njk");
