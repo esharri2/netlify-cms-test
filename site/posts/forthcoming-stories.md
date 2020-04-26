@@ -1,7 +1,9 @@
 ---
 title: Forthcoming stories
-date: '2019-08-25'
+date: 2019-08-25
 image: /media/magazine-rack.jpg
+cover_image:
+  file: /media/magazine-stack.jpg
 ---
 Euclid emerged into consciousness gathered by gravity something incredible is waiting to be known prime number the sky calls to us. The carbon in our apple pies network of wormholes inconspicuous motes of rock and gas invent the universe citizens of distant epochs encyclopaedia galactica? With pretty stories for which there's little good evidence inconspicuous motes of rock and gas citizens of distant epochs citizens of distant epochs as a patch of light vanquish the impossible?
 
