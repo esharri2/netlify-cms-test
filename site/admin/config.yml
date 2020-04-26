@@ -129,6 +129,15 @@ collections: # A list of collections the CMS should be able to edit
                 been designed.) You don't have to mark any of your books as
                 'featured'.",
             }
+          - {
+              label: "Lead-in text for featured book on home page",
+              name: "featured_subtitle",
+              widget: "string",
+              required: false,
+              default: "Available now",
+              hint:
+                "Some text to show before the book featured on your home page, such as 'Coming soon' or 'Available now'",
+            }
   - name: "bio"
     label: "Bio"
     description: "Biographical information."
