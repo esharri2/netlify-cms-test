@@ -46,7 +46,7 @@ CMS.registerEditorComponent({
     {name: 'byline', required: false, label: 'Byline', widget: 'string'}
   ],
   // Pattern to identify a block as being an instance of this component
-  pattern: /^mdimg (\S+)$/,
+  pattern: /^\!\[ (\S+)$/,
   // Function to extract data elements from the regexp match
   fromBlock: function(match) {
     return {
