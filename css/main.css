@@ -39,7 +39,7 @@ button, a, input, textarea {
 }
 
 .cmp-h1 {
-  @apply font-title text-4xl leading-none mt-4 mb-12;
+  @apply font-title text-4xl mt-4 mb-8;
 }
 
 .cmp-h2 {
@@ -66,6 +66,10 @@ button, a, input, textarea {
 
 .cmp-link-button {
   @apply text-light flex bg-dark px-6 py-4 inline-block;
+}
+
+.cmp-link-button:hover {
+  @apply bg-accent1;
 }
 
 .cmp-markdown {

@@ -19,6 +19,7 @@ collections: # A list of collections the CMS should be able to edit
 
       The 'Page and navigation titles' allows you set the page title and
       navigation name for each page. These all have default values to start.
+
     files:
       - name: "general"
         label: "General site information"
@@ -135,6 +136,19 @@ collections: # A list of collections the CMS should be able to edit
               default: "Available now",
               hint:
                 "Some text to show before the book featured on your home page, such as 'Coming soon' or 'Available now'",
+            }
+      - name: "books"
+        label: "Books page settings"
+        file: "site/data/featured.json"
+        fields:
+          - {
+              label: "Show other publications on the books page.",
+              name: "show_other",
+              widget: "boolean",
+              required: true,
+              default: false,
+              hint:
+                "By default your books and other publications are on two separate pages. Select this option to show your other publications at the bottom of the books page",
             }
   - name: "bio"
     label: "Bio"
