@@ -1,6 +1,7 @@
-const pathname = new URL(window.location.href).pathname;
+const url = new URL(window.location.href)
+const pathname = url.pathname;
 
-if (pathname.includes("/admin") || pathname.includes("/#")) {
+if (url.pathname.includes("/admin") || url.hash.includes("recovery_token")) {
   console.log("loading Netlify Identity...");
   (async () => {
     try {
