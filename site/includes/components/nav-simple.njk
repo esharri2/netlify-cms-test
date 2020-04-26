@@ -10,6 +10,6 @@
   {%- endmacro %}
 
   <ul class="flex flex-wrap justify-center items-center flex-col sm:flex-row">
-  {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+    {% include "./nav-links.njk" %}
   </ul>
 </nav>
