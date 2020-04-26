@@ -15,7 +15,7 @@ collections: # A list of collections the CMS should be able to edit
     label: "General settings"
     description: >
       "The 'General site informaton' section has basic information about your
-      site, such as title and description.
+      site, such as title and description.\n\n
 
       The 'Page and navigation titles' allows you set the page title and
       navigation name for each page. These all have default values to start.
