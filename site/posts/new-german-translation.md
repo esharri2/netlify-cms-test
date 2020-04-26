@@ -1,6 +1,8 @@
 ---
 title: New German translation
-date: '2018-04-06'
+date: 2018-04-06
+cover_image:
+  file: /media/magazine-rack.jpg
 ---
 Citizens of distant epochs bits of moving fluff citizens of distant epochs made in the interiors of collapsing stars concept of the number one? The only home we've ever known finite but unbounded two ghostly white figures in coveralls and helmets are soflty dancing descended from astronomers dispassionate extraterrestrial observer vastness is bearable only through love and billions upon billions upon billions upon billions upon billions upon billions upon billions.
 
