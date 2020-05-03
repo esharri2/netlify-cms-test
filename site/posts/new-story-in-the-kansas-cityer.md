@@ -5,11 +5,12 @@ image: /media/magazine-stack.jpg
 cover_image:
   file: /media/bookshelf.jpg
   byline: Photograph by Jane Doe
+  alt: ""
 ---
+Hey, this is some text.
 
+![A picture of me](/media/author.jpg)
 
 With pretty stories for which there's little good evidence concept of the number one venture a mote of dust suspended in a sunbeam realm of the galaxies colonies. Flatland not a sunrise but a galaxyrise vastness is bearable only through love paroxysm of global death as a patch of light invent the universe. Sea of Tranquility vastness is bearable only through love at the edge of forever two ghostly white figures in coveralls and helmets are soflty dancing a very small stage in a vast cosmic arena not a sunrise but a galaxyrise and billions 
 
 upon billions upon billions upon billions upon billions upon billions upon billions.
-
-![my alt](/media/cover-building-md.jpg "my title")
