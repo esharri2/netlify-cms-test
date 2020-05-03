@@ -9,7 +9,7 @@
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   <script>
-CMS.registerEditorComponent({
+{# CMS.registerEditorComponent({
   // Internal id of the component
   id: "youtube",
   // Visible label
@@ -35,15 +35,14 @@ CMS.registerEditorComponent({
       '<img src="http://img.youtube.com/vi/' + obj.id + '/maxresdefault.jpg" alt="Youtube Video"/>'
     );
   }
-});
+}); #}
 
-CMS.registerEditorComponent({
+{# CMS.registerEditorComponent({
   id: "mdimg",
   label: "Custom image",
   fields: [
     {name: 'file', label: 'Image', widget: 'image'}, 
     {name: 'alt', required: false, label: 'Alt text', widget: 'string', hint: "This is how your image will be described to someone using a screen reader. You can leave this blank if the image is purely decorative."},
-    {name: 'byline', required: false, label: 'Byline', widget: 'string'}
   ],
   // Pattern to identify a block as being an instance of this component
   pattern: /^\!\[ (\S+)$/,
@@ -58,7 +57,7 @@ CMS.registerEditorComponent({
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
   toPreview: obj => `<img src="${obj.file}"/>`
-});
+}); #}
 
 </script>
 
