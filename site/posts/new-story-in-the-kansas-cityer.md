@@ -1,6 +1,6 @@
 ---
 title: New story in the Kansas Cityer
-date: 2020-03-25T00:00:00.000Z
+date: 2020-05-03
 image: /media/magazine-stack.jpg
 cover_image:
   file: /media/bookshelf.jpg
