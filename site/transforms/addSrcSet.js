@@ -1,4 +1,5 @@
 const jsdom = require("jsdom");
+const path = require("path");
 const { JSDOM } = jsdom;
 
 module.exports = function (value, outputPath) {
@@ -6,32 +7,23 @@ module.exports = function (value, outputPath) {
     const DOM = new JSDOM(value, {
       resources: "usable",
     });
-    
     const document = DOM.window.document;
-
     const markdownImages = [...document.querySelectorAll(".cmp-markdown img")];
-  
+
     if (markdownImages.length) {
       markdownImages.forEach((image) => {
         image.setAttribute("loading", "lazy");
-        console.log("YO");
-        console.log(image)
+        const imageName = image.getAttribute("src");
+        const { dir, name, ext } = path.parse(imageName);
+        // TODO this duplicates size names and sizes that are in imageConverter.js; could be simplified.
 
-        // If an image has a title it means that the user added a caption
-        // so replace the image with a figure containing that image and a caption
-        if (image.hasAttribute("title")) {
-          const figure = document.createElement("figure");
-          const figCaption = document.createElement("figcaption");
-
-          figCaption.innerHTML = image.getAttribute("title");
-
-          image.removeAttribute("title");
-
-          figure.appendChild(image.cloneNode(true));
-          figure.appendChild(figCaption);
-
-          image.replaceWith(figure);
-        }
+        const srcSet = `
+          ${dir}/${name}-lg${ext} 1080w, 
+          ${dir}/${name}-md${ext} 720w,
+          ${dir}/${name}-sm${ext} 480w
+        `;
+        image.setAttribute("src", `${dir}/${name}-md${ext}`);
+        image.setAttribute("srcset", srcSet);
       });
     }
 
@@ -39,4 +31,3 @@ module.exports = function (value, outputPath) {
   }
   return value;
 };
-
