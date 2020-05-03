@@ -12,6 +12,4 @@ With pretty stories for which there's little good evidence concept of the number
 
 upon billions upon billions upon billions upon billions upon billions upon billions.
 
-![my alt](/media/cover-building.jpg "my title")
-
-testing
+![my alt](/media/cover-building-md.jpg "my title")
