@@ -13,6 +13,8 @@ module.exports = function (value, outputPath) {
     if (markdownImages.length) {
       markdownImages.forEach((image) => {
         image.setAttribute("loading", "lazy");
+        if (image.hasAttribute("srcset")) return;
+        
         const imageName = image.getAttribute("src");
         const { dir, name, ext } = path.parse(imageName);
         // TODO this duplicates size names and sizes that are in imageConverter.js; could be simplified.

@@ -21,6 +21,7 @@ module.exports = config => {
 
   // Include our static assets
   config.addPassthroughCopy("site/admin");
+  config.addPassthroughCopy({ "site/media/fonts": "/fonts" });
   config.addPassthroughCopy({"site/media/uploads" : "/media/source"});
   config.addPassthroughCopy({ "site/media/art": "/media/source" });
   config.addPassthroughCopy({"site/media/site_icons": "/" });

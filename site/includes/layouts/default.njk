@@ -12,10 +12,9 @@
         {# {% if page.fileSlug === "blog" %}
             <meta name="robots" content="noindex,follow"/>
         {% endif %} #}
-        
+        <link href="https://fonts.googleapis.com/css?family=Spartan|Roboto&display=swap" rel="stylesheet">  
         <link rel="stylesheet" href="/main.css">
         <script src="/bundle.js" defer="defer"></script>
-        <link href="https://fonts.googleapis.com/css?family=Spartan|Roboto&display=swap" rel="stylesheet">      
         <link rel="canonical" href="{{ general.site_domain }}{{ page.url }}">
     </head>
 
@@ -29,5 +28,6 @@
         {% if page.fileSlug !== '' or featured.show  %}
             {% include "components/footer.njk" %} 
         {% endif %}
+        <div class="ie-only-notice">Sorry, this site is not built for Internet Explorer. Please try it on a different browser.</div>
     </body>
 </html>
