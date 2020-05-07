@@ -10,6 +10,7 @@ pagination:
   alias: books
 ---
 
+
 {% if books.length === 1 %}
   {# TODO: books[0] didn't work so using loop ? #}
   {% for book in books %}
@@ -29,12 +30,20 @@ pagination:
   {% endfor %}
 {% else %}
   <h1 class="cmp-h1">{{titles.books}}</h1>
-  <div class="font-title grid grid-cols-1 md:grid-cols-4 gap-3 row-gap-6">
+  <div class="font-title grid grid-cols-1 
+    {% if books.length === 2 %}
+      md:grid-cols-2
+    {% elif books.length === 3 %}
+      md:grid-cols-3
+    {% else %}
+      md:grid-cols-4 
+    {% endif %}
+  gap-3 row-gap-6">
     {% for book in books | reverse %}
       <div class="mt-4">
         <a class="group block relative" href="/books/{{book.data.title | slug}}">
           <img 
-            class="w-full md:w-auto" 
+            class="w-full" 
             srcset="{% srcset book.data.cover %}" 
             src="{% src book.data.cover %}"
             sizes="(min-width: 767px) 250px, 100vw" 

@@ -352,7 +352,7 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - { label: "Text", name: "text", widget: "text" }
           - { label: "Attribution", name: "attribution", widget: "string" }
-      - label: "Reviews"
+      - label: "Reviews and Press"
         name: "reviews"
         widget: "list"
         required: false
