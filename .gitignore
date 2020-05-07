@@ -2,3 +2,4 @@
 /site/assets
 dist/
 .DS_Store
+.vscode
