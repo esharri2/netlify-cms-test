@@ -1,15 +1,15 @@
 ---
 layout: container
 title: Books
-eleventyNavigation:
-  key: Books
-  order: 2
+eleventyComputed:
+  eleventyNavigation:
+    key: "{{titles.books}}"
+    order: 2
 pagination:
   data: collections.book
   size: 36
   alias: books
 ---
-
 
 {% if books.length === 1 %}
   {# TODO: books[0] didn't work so using loop ? #}
@@ -21,7 +21,7 @@ pagination:
     {% set cover = book.cover %}
     {% set date = book.date %}
     {% set publisher = book.publisher %}
-    {% set purchase_links = book.purchase_link %}
+    {% set purchase_links = book.purchase_links %}
     {% set reviews = book.reviews %}
     {% set synopsis = book.synopsis %}
     {% set title = book.title %}
