@@ -46,7 +46,7 @@ module.exports = {
     },
   },
   variants: {
-    height: ["group-hover", "hover"],
+    height: ["group-hover", "hover", "responsive"],
     margin: ["first", "last", "responsive"],
     opacity: ["group-hover"],
     padding: ["first", "last", "responsive"],

@@ -31,7 +31,11 @@ blurbs:
     attribution: Ethan Cross
 reviews:
   - publication: New York Times
-    purpose: https://www.newyorktimes.com
+    link: https://www.newyorktimes.com
+    title: "Ash of Steller Test Limits"  
   - publication: The Lit Review
-    purpose: https://www.google.com
+    link: https://www.google.com
+  - publication: The Big Review
+    link: https://www.google.com
+    title: "The Mind is Space: A Review of Ash of Stellar"
 ---

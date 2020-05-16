@@ -26,7 +26,7 @@ blurbs:
     attribution: Duff Killian
 reviews:
   - publication: Boston Review
-    purpose: https://www.bostonreview.com
+    link: https://www.bostonreview.com
   - publication: New York Times
-    purpose: https://www.newyorktimes.com
+    link: https://www.newyorktimes.com
 ---

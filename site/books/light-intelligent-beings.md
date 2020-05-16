@@ -25,5 +25,5 @@ blurbs:
     attribution: Tina Wells
 reviews:
   - publication: New York Times
-    purpose: https://www.newyorktimes.com
+    link: https://www.newyorktimes.com
 ---

@@ -4,6 +4,7 @@
             class="block max-w-md w-full mb-6 lg:pr-6" 
             srcset="{% srcset cover %}" 
             src="{% src cover %}" 
+            sizes="(min-width: 767px) 700px, 100vw"
             alt="The book cover for {{title}}"/>
         <div>
         {% if synopsis%}
@@ -28,7 +29,7 @@
     </div>
     {% if reviews %}<h2 class="cmp-h2">Reviews and Press</h2>{% endif %}
     {% for review in reviews %}
-            <a class="my-4 cmp-link block underline" href="{{review.link}}">{{review.publication}}</a>
+            <a class="my-4 cmp-link block" href="{{review.link}}">{{review.title}}{% if review.title %} | {% endif %}<span class="italic underline">{{review.publication}}</span></a>
     {% endfor %}
 </div>
 
