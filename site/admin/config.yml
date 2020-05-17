@@ -13,6 +13,8 @@ publish_mode: editorial_workflow
 collections: # A list of collections the CMS should be able to edit
   - name: "general"
     label: "General settings"
+    editor:
+      preview: false
     description: >
       The 'General site informaton' section has basic information about your
       site, such as title and description.
@@ -194,6 +196,8 @@ collections: # A list of collections the CMS should be able to edit
             editorComponents: []
   - name: "contact"
     label: "Contact information"
+    editor:
+      preview: false
     description: "Contact information and social media links."
     files:
       - name: "contact"
@@ -309,6 +313,8 @@ collections: # A list of collections the CMS should be able to edit
   - name: "books"
     label: "Books"
     label_singular: "book"
+    editor:
+      preview: false
     folder: "site/books"
     create: true
     fields:
@@ -371,6 +377,8 @@ collections: # A list of collections the CMS should be able to edit
   - name: "publications"
     label: "Other publications"
     label_singular: "publication"
+    editor:
+      preview: false
     description: "Non-book publications"
     folder: "site/publications"
     create: true
@@ -405,6 +413,8 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Link", name: "link", widget: "string", required: false }
   - name: "events"
     label: "Events"
+    editor:
+      preview: false
     label_singular: "event"
     description: "Schedule of events"
     folder: "site/events"
@@ -427,6 +437,8 @@ collections: # A list of collections the CMS should be able to edit
         }
   - name: "services"
     label: "Services"
+    editor:
+      preview: false
     label_singular: "service"
     description: "A list of freelance services you offer"
     folder: "site/services"
