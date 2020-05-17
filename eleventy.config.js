@@ -82,13 +82,7 @@ module.exports = (config) => {
     const futureItems = items.filter((item) => {
       return getUnixTime(item.data.date) >= currentUnixTime;
     });
-
-    console.log("length is ", futureItems.length)
-
-    console.log(futureItems);
-
     return futureItems;
-    // console.log(futureItems);
   });
 
   // Transforms

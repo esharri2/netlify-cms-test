@@ -153,6 +153,8 @@ collections: # A list of collections the CMS should be able to edit
   - name: "bio"
     label: "Bio"
     description: "Biographical information."
+    editor:
+     preview: false
     files:
       - name: "bio"
         label: "Bio"
@@ -258,6 +260,8 @@ collections: # A list of collections the CMS should be able to edit
   - name: "posts"
     label: "News items"
     label_singular: "news item"
+    editor:
+      preview: false
     folder: "site/posts"
     create: true
     description: "Updates and announcements."
