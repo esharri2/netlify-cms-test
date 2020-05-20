@@ -1,6 +1,6 @@
 ---
-title: European travel
-date: 2020-04-04
+title: "European travel - Cancelled "
+date: 2020-04-04T00:00:00.000Z
 image: /media/germany.jpg
 cover_image:
   file: /media/germany.jpg
