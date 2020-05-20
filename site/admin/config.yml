@@ -126,8 +126,7 @@ collections: # A list of collections the CMS should be able to edit
               widget: "boolean",
               required: true,
               default: false,
-              hint:
-                "You can set one of your books 'featured' to have it display
+              hint: "You can set one of your books 'featured' to have it display
                 prominently on the site (the location depends on how your site
                 has been designed.) You don't have to mark any of your books as
                 'featured'.",
@@ -152,8 +151,7 @@ collections: # A list of collections the CMS should be able to edit
               widget: "boolean",
               required: true,
               default: false,
-              hint:
-                "By default your books and other publications are on two
+              hint: "By default your books and other publications are on two
                 separate pages. Select this option to show your other
                 publications at the bottom of the books page",
             }
@@ -218,8 +216,7 @@ collections: # A list of collections the CMS should be able to edit
                 inquires:'. Leave blank if you don't need it.",
             }
           - label: "Other contact emails"
-            description:
-              "Emails for special cases, such as bookings or reviews."
+            description: "Emails for special cases, such as bookings or reviews."
             name: "other_emails"
             widget: "list"
             fields:
@@ -302,8 +299,7 @@ collections: # A list of collections the CMS should be able to edit
               name: "alt",
               widget: "string",
               required: false,
-              hint:
-                "This is how your image will be described to someone using a
+              hint: "This is how your image will be described to someone using a
                 screen reader. You can leave this blank if the image is purely
                 decorative.",
             }
@@ -357,7 +353,13 @@ collections: # A list of collections the CMS should be able to edit
               widget: "string",
               required: true,
             }
-          - { label: "Link", name: "link", widget: "string", required: true }
+          - {
+              label: "Link",
+              name: "link",
+              hint: "You must include https:// or http:// in front of the link, e.g. 'https://www.google.com' ",
+              widget: "string",
+              required: true,
+            }
       - label: "Blurbs"
         name: "blurbs"
         widget: "list"
@@ -376,7 +378,13 @@ collections: # A list of collections the CMS should be able to edit
               widget: "string",
               required: true,
             }
-          - { label: "Link", name: "link", widget: "string", required: true }
+          - {
+              label: "Link",
+              name: "link",
+              hint: "You must include https:// or http:// in front of the link, e.g. 'https://www.google.com' ",
+              widget: "string",
+              required: true,
+            }
           - {
               label: "Review title",
               name: "title",
@@ -419,7 +427,13 @@ collections: # A list of collections the CMS should be able to edit
           format: "YYYY-MM-DD",
           required: true,
         }
-      - { label: "Link", name: "link", widget: "string", required: false }
+      - {
+          label: "Link",
+          name: "link",
+          hint: "You must include https:// or http:// in front of the link, e.g. 'https://www.google.com' ",
+          widget: "string",
+          required: false,
+        }
   - name: "events"
     label: "Events"
     editor:
