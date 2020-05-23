@@ -11,7 +11,7 @@ synopsis: Rich in mystery galaxies cosmic ocean of brilliant syntheses something
   ghostly white figures in coveralls and helmets are soflty dancing and billions
   upon billions upon billions upon billions upon billions upon billions upon
   billions.
-cover: /media/cover-woods.jpg
+cover: /media/books.webp
 date: 2020-03-21T00:00:00.000Z
 purchase_links:
   - source: Powell's Bookstore
