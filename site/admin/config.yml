@@ -37,6 +37,7 @@ collections: # A list of collections the CMS should be able to edit
               label: "Domain name",
               name: "site_domain",
               widget: "string",
+              hint: "Leave off https://www from the beginning. E.g. google.com",
               required: true,
             }
           - {
